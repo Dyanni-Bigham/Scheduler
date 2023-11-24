@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Diagnostics;
+using Scheduler.Utils;
 
 namespace Scheduler
 {
@@ -23,6 +24,7 @@ namespace Scheduler
     {
         private List<string> selectedDays = new List<string>();
         private List<string> selectedIntervals = new List<string>();
+        private Entry entry = new Entry();
 
         public MainWindow()
         {
@@ -47,40 +49,33 @@ namespace Scheduler
             // get all of the selected days
             foreach (var selectedDay in daysListBox.SelectedItems)
             {
-                string day = selectedDay.ToString();
-                selectedDays.Add(day);
+                if (selectedDay is ListBoxItem listBoxItem)
+                {
+                    string day = listBoxItem.Content.ToString();
+                    selectedDays.Add(day);
+                }
             }
 
         }
 
         private void IntervalsListBox_SelectionChanged(Object sender, SelectionChangedEventArgs e)
         {
-            // clear existing items in array
-            selectedIntervals.Clear();
+            var selectedInterval = intervalsListBox.SelectedItem;
 
-            // get all of the selected intervals
-            foreach (var selectedInterval in intervalsListBox.SelectedItems) 
+            if (selectedInterval is ListBoxItem listBoxItem)
             {
-                string interval = selectedInterval.ToString();
-                selectedIntervals.Add(interval);
+                entry.Interval = listBoxItem.Content.ToString();
             }
+
         }
         
         private void Test_button(Object sender, RoutedEventArgs e)
-        {   
-            // Printing to console to see if the days show
-            foreach (var day in selectedDays)
-            {
-                Debug.WriteLine(day);
-            }
-
-            Debug.WriteLine("============================");
-
-            // printing to console to see if the intervals show
-            foreach (var interval in selectedIntervals)
-            {
-                Debug.WriteLine(interval);
-            }
+        {
+            //Debug.WriteLine("Selected Days: " + string.Join(", ", selectedDays));
+            //string.Join(",", entry.Days);
+            entry.Days = selectedDays;
+            entry.formatDays();
+            entry.testEntry();
         }
 
     }
