@@ -23,7 +23,7 @@
         <Label HorizontalContentAlignment="Center" Padding="20" FontSize="16" Grid.Column="1">Intervals</Label>
         <Label HorizontalContentAlignment="Center" Padding="20" FontSize="16" Grid.Column="2">Applications</Label>
 
-        <ListBox SelectionMode="Multiple" Grid.Column="0"  Width="90" Margin="28,50,19,98">
+        <ListBox x:Name="daysListBox" SelectionMode="Multiple" SelectionChanged="DaysListBox_SelectionChanged" Grid.Column="0"  Width="90" Margin="28,50,19,98">
             <ListBoxItem>Monday</ListBoxItem>
             <ListBoxItem>Tuesday</ListBoxItem>
             <ListBoxItem>Wednesday</ListBoxItem>
@@ -33,7 +33,7 @@
             <ListBoxItem>Sunday</ListBoxItem>
         </ListBox>
 
-        <ListBox Width="80" Grid.Column="1" Margin="26,50,30,161">
+        <ListBox x:Name="intervalsListBox" SelectionChanged="IntervalsListBox_SelectionChanged" Width="80" Grid.Column="1" Margin="26,50,30,161">
             <ListBoxItem>15 Minutes</ListBoxItem>
             <ListBoxItem>30 Minutes</ListBoxItem>
             <ListBoxItem>1 Hour</ListBoxItem>
@@ -44,7 +44,9 @@
             <ListBoxItem>HelloWorld</ListBoxItem>
         </ListBox>
 
-        <Button Height="20" Grid.Column="1" Margin="19,164,23,116">Custom Interval</Button>
+        <Button Height="20" Grid.Column="1" Margin="19,164,23,116" Click="Summon_CustomInterval">Custom Interval</Button>
+
+        <Button Grid.Column="1" Margin="36,185,40,90" Click="Test_button">Test</Button>
     </Grid>
 
 </Window>
