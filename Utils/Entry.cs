@@ -10,7 +10,10 @@ namespace Scheduler.Utils
 {
     public class Entry
     {
-        public List<string> Days
+        public List<string> Days 
+        { get; set; }
+
+        public string TimeUnit
         { get; set; }
 
         public string Interval
@@ -30,6 +33,12 @@ namespace Scheduler.Utils
             Debug.WriteLine("Selected Interval:");
             Debug.WriteLine("==============\n");
             Debug.WriteLine(Interval);
+
+            Debug.WriteLine("\n\n");
+
+            Debug.WriteLine("Selected Interval:");
+            Debug.WriteLine("==============\n");
+            Debug.WriteLine(TimeUnit);
         }
 
         public void formatDays()

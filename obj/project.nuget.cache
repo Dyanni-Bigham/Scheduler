@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "5CyWbc+/BUEblH+82o9BLNUa/junz6cJRWL/2GtR+2tjmnQQdSSCOlFuaSuKQs86xxa7ouO8xTT1NlnCyJLXAw==",
+  "dgSpecHash": "pFWJcbvd5c55bzzG+kcamuKrKP2K3sZbWnb572lzUkROBGykbXHp1n0+Vilxv6C17XMQeOQYHCwOMJXSL3AQcA==",
   "success": true,
   "projectFilePath": "C:\\Users\\dyann\\Documents\\Development\\Scheduler\\Scheduler.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\dyann\\.nuget\\packages\\serilog\\3.1.1\\serilog.3.1.1.nupkg.sha512",
+    "C:\\Users\\dyann\\.nuget\\packages\\serilog.sinks.console\\5.0.1\\serilog.sinks.console.5.0.1.nupkg.sha512",
+    "C:\\Users\\dyann\\.nuget\\packages\\serilog.sinks.file\\5.0.0\\serilog.sinks.file.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

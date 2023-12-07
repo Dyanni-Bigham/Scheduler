@@ -73,7 +73,7 @@ namespace Scheduler
         {
             //Debug.WriteLine("Selected Days: " + string.Join(", ", selectedDays));
             //string.Join(",", entry.Days);
-            entry.Days = selectedDays;
+            //entry.Interval = selectedDays
             entry.formatDays();
             entry.testEntry();
         }
