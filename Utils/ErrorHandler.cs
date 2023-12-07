@@ -13,7 +13,6 @@ namespace Scheduler.Utils
         UnknownError = 1000,
         IncorrectNumberRangeError = 1001,
         MissingUnitError = 1002,
-        Missing
         // Add more error codes as needed
     }
     /**
@@ -61,7 +60,7 @@ namespace Scheduler.Utils
 
             if (ex is Exception exceptionThree)
             {
-                errorMessage = $"An error occured. Error Code: {ErrorCode.UnknownError:D}" +
+                errorMessage = $"An error occured. Error Code: {ErrorCode.UnknownError:D}";
             }
 
         }

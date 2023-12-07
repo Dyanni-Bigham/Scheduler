@@ -22,11 +22,11 @@
         <TextBox x:Name="timeInput" FontSize="16" Margin="5,4,100,19" Grid.Column="1" />
 
         <Label Margin="0,5,0,68" FontSize="16"  Grid.Row="1">Unit of Time</Label>
-        <ComboBox Grid.Row="1" Grid.Column="1" Margin="5,4,99,66">
+        <ComboBox x:Name="myComboBox" Grid.Row="1" Grid.Column="1" Margin="5,4,99,66">
             <ComboBoxItem Content="Minute"/>
             <ComboBoxItem Content="Hour"/>
         </ComboBox>
 
-        <Button x:Name="btnSubmit" Grid.Row="1" Margin="5,70,124,-1" Grid.Column="1" >Submit</Button>
+        <Button x:Name="btnSubmit" Grid.Row="1" Margin="5,70,124,-1" Grid.Column="1" Click="btnSubmit_Click">Submit</Button>
     </Grid>
 </Window>
