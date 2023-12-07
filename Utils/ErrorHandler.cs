@@ -13,6 +13,7 @@ namespace Scheduler.Utils
         UnknownError = 1000,
         IncorrectNumberRangeError = 1001,
         MissingUnitError = 1002,
+        MissingTimeError = 1003,
         // Add more error codes as needed
     }
     /**

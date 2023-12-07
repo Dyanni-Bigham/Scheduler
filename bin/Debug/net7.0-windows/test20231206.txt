@@ -140,3 +140,20 @@ Scheduler.Utils.IncorrectNumberRangeException: Exception of type 'Scheduler.Util
 2023-12-06 18:39:16.560 -07:00 [ERR] An error occured Unit of time is missing. Please select a unit.
 Scheduler.Utils.MissingUnitException: Unit of time is missing. Please select a unit.
    at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 42
+2023-12-06 19:00:32.712 -07:00 [ERR] An error occured Unit of time is missing. Please select a unit.
+Scheduler.Utils.MissingUnitException: Unit of time is missing. Please select a unit.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 42
+2023-12-06 19:00:42.899 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 50
+2023-12-06 19:00:53.105 -07:00 [ERR] An error occured Unit of time is missing. Please select a unit.
+Scheduler.Utils.MissingUnitException: Unit of time is missing. Please select a unit.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 42
+2023-12-06 19:00:58.243 -07:00 [ERR] An error occured Unit of time is missing. Please select a unit.
+Scheduler.Utils.MissingUnitException: Unit of time is missing. Please select a unit.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 42
+2023-12-06 19:01:05.648 -07:00 [ERR] An error occured Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+Scheduler.Utils.IncorrectNumberRangeException: Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 54
