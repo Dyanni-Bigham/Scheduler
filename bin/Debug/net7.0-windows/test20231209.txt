@@ -1,0 +1,321 @@
+2023-12-09 14:22:08.383 -07:00 [ERR] An error occured Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+Scheduler.Utils.IncorrectNumberRangeException: Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 56
+2023-12-09 14:22:16.808 -07:00 [ERR] An error occured The input string '432432ewrew' was not in a correct format.
+System.FormatException: The input string '432432ewrew' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 52
+2023-12-09 14:22:26.785 -07:00 [ERR] An error occured Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+Scheduler.Utils.IncorrectNumberRangeException: Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 56
+2023-12-09 14:23:02.976 -07:00 [ERR] An error occured Unit of time is missing. Please select a unit.
+Scheduler.Utils.MissingUnitException: Unit of time is missing. Please select a unit.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 42
+2023-12-09 14:27:48.267 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 63
+2023-12-09 14:27:52.209 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 63
+2023-12-09 14:28:20.296 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 52
+2023-12-09 14:32:06.998 -07:00 [ERR] An error occured Invalid number format. Please enter a valid number.
+System.FormatException: Invalid number format. Please enter a valid number.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 67
+2023-12-09 14:32:12.452 -07:00 [ERR] An error occured Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+Scheduler.Utils.IncorrectNumberRangeException: Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 62
+2023-12-09 14:32:22.261 -07:00 [ERR] An error occured Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+Scheduler.Utils.IncorrectNumberRangeException: Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 58
+2023-12-09 14:32:38.293 -07:00 [ERR] An error occured Unit of time is missing. Please select a unit.
+Scheduler.Utils.MissingUnitException: Unit of time is missing. Please select a unit.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 42
+2023-12-09 14:34:11.539 -07:00 [ERR] An error occured Unit of time is missing. Please select a unit.
+Scheduler.Utils.MissingUnitException: Unit of time is missing. Please select a unit.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 42
+2023-12-09 14:39:41.801 -07:00 [ERR] An error occured Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+Scheduler.Utils.IncorrectNumberRangeException: Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 62
+2023-12-09 14:42:19.095 -07:00 [ERR] An error occured Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+Scheduler.Utils.IncorrectNumberRangeException: Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 58
+2023-12-09 14:43:20.557 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 63
+2023-12-09 14:43:28.308 -07:00 [ERR] An error occured Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+Scheduler.Utils.IncorrectNumberRangeException: Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 67
+2023-12-09 14:43:34.620 -07:00 [ERR] An error occured Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+Scheduler.Utils.IncorrectNumberRangeException: Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 67
+2023-12-09 14:43:41.461 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 63
+2023-12-09 14:43:42.406 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 63
+2023-12-09 14:43:42.932 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 63
+2023-12-09 14:43:43.157 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 63
+2023-12-09 14:43:43.457 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 63
+2023-12-09 14:43:43.803 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 63
+2023-12-09 14:43:44.273 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 63
+2023-12-09 14:43:44.461 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 63
+2023-12-09 14:43:44.632 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 63
+2023-12-09 14:43:44.785 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 63
+2023-12-09 14:43:44.941 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 63
+2023-12-09 14:43:45.316 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 63
+2023-12-09 14:43:45.571 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 63
+2023-12-09 14:43:45.789 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 63
+2023-12-09 14:43:45.984 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 63
+2023-12-09 14:43:46.187 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 63
+2023-12-09 14:43:46.367 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 63
+2023-12-09 14:43:46.562 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 63
+2023-12-09 14:43:46.771 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 63
+2023-12-09 14:43:47.008 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 63
+2023-12-09 14:43:47.244 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 63
+2023-12-09 14:43:47.438 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 63
+2023-12-09 14:43:47.640 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 63
+2023-12-09 14:43:47.823 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 63
+2023-12-09 14:43:47.986 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 63
+2023-12-09 14:43:48.294 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 63
+2023-12-09 14:43:48.541 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 63
+2023-12-09 14:43:48.954 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 63
+2023-12-09 14:43:49.239 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 63
+2023-12-09 14:43:49.509 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 63
+2023-12-09 14:43:50.184 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 63
+2023-12-09 14:52:36.579 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 63
+2023-12-09 14:52:43.632 -07:00 [ERR] An error occured Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+Scheduler.Utils.IncorrectNumberRangeException: Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 67
+2023-12-09 14:52:48.836 -07:00 [ERR] An error occured Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+Scheduler.Utils.IncorrectNumberRangeException: Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 67
+2023-12-09 14:53:00.790 -07:00 [ERR] An error occured Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+Scheduler.Utils.IncorrectNumberRangeException: Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 56
+2023-12-09 14:53:06.372 -07:00 [ERR] An error occured Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+Scheduler.Utils.IncorrectNumberRangeException: Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 56
+2023-12-09 14:53:29.698 -07:00 [ERR] An error occured Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+Scheduler.Utils.IncorrectNumberRangeException: Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 56
+2023-12-09 14:53:56.646 -07:00 [ERR] An error occured Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+Scheduler.Utils.IncorrectNumberRangeException: Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 56
+2023-12-09 14:54:22.506 -07:00 [ERR] An error occured Unit of time is missing. Please select a unit.
+Scheduler.Utils.MissingUnitException: Unit of time is missing. Please select a unit.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 42
+2023-12-09 14:54:27.189 -07:00 [ERR] An error occured Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+Scheduler.Utils.IncorrectNumberRangeException: Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 67
+2023-12-09 15:01:51.623 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 52
+2023-12-09 15:05:09.085 -07:00 [ERR] An error occured Exception of type 'Scheduler.Utils.MissingUnitException' was thrown.
+Scheduler.Utils.MissingUnitException: Exception of type 'Scheduler.Utils.MissingUnitException' was thrown.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 42
+2023-12-09 15:05:14.210 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 61
+2023-12-09 15:05:21.327 -07:00 [ERR] An error occured Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+Scheduler.Utils.IncorrectNumberRangeException: Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 65
+2023-12-09 15:08:23.533 -07:00 [ERR] An error occured Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+Scheduler.Utils.IncorrectNumberRangeException: Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 65
+2023-12-09 15:11:11.439 -07:00 [ERR] An error occured Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+Scheduler.Utils.IncorrectNumberRangeException: Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 65
+2023-12-09 15:13:07.905 -07:00 [ERR] An error occured Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+Scheduler.Utils.IncorrectNumberRangeException: Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 55
+2023-12-09 15:15:57.602 -07:00 [ERR] An error occured Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+Scheduler.Utils.IncorrectNumberRangeException: Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 55
+2023-12-09 15:24:40.074 -07:00 [ERR] An error occured Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+Scheduler.Utils.IncorrectNumberRangeException: Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 55
+2023-12-09 15:26:32.765 -07:00 [ERR] An error occured Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+Scheduler.Utils.IncorrectNumberRangeException: Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 55
+2023-12-09 15:26:44.255 -07:00 [ERR] An error occured Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+Scheduler.Utils.IncorrectNumberRangeException: Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 55
+2023-12-09 15:29:58.055 -07:00 [ERR] An error occured Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+Scheduler.Utils.IncorrectNumberRangeException: Exception of type 'Scheduler.Utils.IncorrectNumberRangeException' was thrown.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 55
+2023-12-09 15:34:17.752 -07:00 [ERR] An error occured Incorrect Range. Must be between 1 - 59 minutes.
+Scheduler.Utils.IncorrectNumberRangeException: Incorrect Range. Must be between 1 - 59 minutes.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 55
+2023-12-09 15:34:24.607 -07:00 [ERR] An error occured Incorrect Range. Must be between 1 - 15 hours.
+Scheduler.Utils.IncorrectNumberRangeException: Incorrect Range. Must be between 1 - 15 hours.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 65
+2023-12-09 15:59:07.213 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 51
+2023-12-09 15:59:46.934 -07:00 [ERR] An error occured Incorrect Range. Must be between 1 - 15 hours.
+Scheduler.Utils.IncorrectNumberRangeException: Incorrect Range. Must be between 1 - 15 hours.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 65
+2023-12-09 16:00:19.652 -07:00 [ERR] An error occured Exception of type 'Scheduler.Utils.MissingUnitException' was thrown.
+Scheduler.Utils.MissingUnitException: Exception of type 'Scheduler.Utils.MissingUnitException' was thrown.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 42
+2023-12-09 16:00:26.028 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 61
+2023-12-09 16:00:34.667 -07:00 [ERR] An error occured Exception of type 'Scheduler.Utils.MissingUnitException' was thrown.
+Scheduler.Utils.MissingUnitException: Exception of type 'Scheduler.Utils.MissingUnitException' was thrown.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 42
+2023-12-09 16:03:43.527 -07:00 [ERR] An error occured Unit of time is missing. Please select a unit.
+Scheduler.Utils.MissingUnitException: Unit of time is missing. Please select a unit.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 42
+2023-12-09 16:03:56.604 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 63
+2023-12-09 16:04:06.176 -07:00 [ERR] An error occured Incorrect Range. Must be between 1 - 15 hours.
+Scheduler.Utils.IncorrectNumberRangeException: Incorrect Range. Must be between 1 - 15 hours.
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 67

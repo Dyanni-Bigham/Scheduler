@@ -10,8 +10,8 @@ namespace Scheduler.Utils
     {
         public IncorrectNumberRangeException() { }
 
-        public IncorrectNumberRangeException(string message) { }
+        public IncorrectNumberRangeException(string message) : base (message) { }
 
-        public IncorrectNumberRangeException (string message, Exception innerException) { } 
+        public IncorrectNumberRangeException (string message, Exception inner) : base(message, inner) { } 
     }
 }
