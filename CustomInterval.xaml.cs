@@ -40,30 +40,38 @@ namespace Scheduler
                 else
                 {
                     throw new MissingUnitException
-                        ("Unit of time is missing. Please select a unit.");
+                    ("Unit of time is missing. Please select a unit.");
                 }
 
                 entry.Interval = timeInput.Text;
 
-                if (entry.TimeUnit.Equals("Minute"))
+                if (entry.Interval != null)
                 {
-                    int interval = Int32.Parse(entry.Interval);
-
-                    if (interval < 1 || interval > 59)
+                    if (entry.TimeUnit.Equals("Minute"))
                     {
-                        throw new IncorrectNumberRangeException
-                         ("Number inputted is not witin range 0 - 59 minutes");
+                        int interval = Int32.Parse (entry.Interval);
+
+                        if (interval < 1 || interval > 59)
+                        {
+                            throw new IncorrectNumberRangeException 
+                            ("Incorrect Range. Must be between 1 - 59 minutes.");
+                        }
+
+                    }
+                    else if (entry.TimeUnit.Equals("Hour"))
+                    {
+                        int interval  = Int32.Parse (entry.Interval);
+
+                        if ( interval < 1 || interval > 15)
+                        {
+                            throw new IncorrectNumberRangeException
+                            ("Incorrect Range. Must be between 1 - 15 hours.");
+                        }
                     }
                 }
-                else if (entry.TimeUnit.Equals("Hour"))
+                else
                 {
-                    int interval = Int32.Parse(entry.Interval);
-
-                    if (interval < 1 || interval > 15)
-                    {
-                        throw new IncorrectNumberRangeException
-                            ("Number inputted is within range 1 - 15 hours.");
-                    }
+                    throw new FormatException("The time field is missing. Please enter a time.");
                 }
 
                 entry.testEntry();

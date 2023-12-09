@@ -13,7 +13,7 @@ namespace Scheduler.Utils
         UnknownError = 1000,
         IncorrectNumberRangeError = 1001,
         MissingUnitError = 1002,
-        MissingTimeError = 1003,
+        FormatError = 1003,
         // Add more error codes as needed
     }
     /**
@@ -43,25 +43,27 @@ namespace Scheduler.Utils
             LogError(ex);
 
             // Handle specific types of exceptions
+
+            //TODO: turn the error messages in the if statement to functions
             if (ex is IncorrectNumberRangeException exception)
             {
-                errorMessage = $"An error occured. Error Code: {ErrorCode.IncorrectNumberRangeError:D}" +
-                   $"\n\n Number inputted is not witin range 0 - 59 minutes";
+                errorMessage = ex.Message + $" Error Code: {ErrorCode.IncorrectNumberRangeError:D}";
                 MessageBox.Show(errorMessage, "Error", MessageBoxButton.OK,
                                 MessageBoxImage.Error);
             }
 
             if (ex is MissingUnitException exceptionTwo)
             {
-                errorMessage = $"An error occured. Error Code: {ErrorCode.MissingUnitError:D}" +
-                    $"\n\n Unit of time is missing. Please select a unit.";
+                errorMessage = ex.Message + $" Error Code: {ErrorCode.MissingUnitError:D}";
                 MessageBox.Show(errorMessage, "Error", MessageBoxButton.OK,
                                 MessageBoxImage.Error);
             }
 
-            if (ex is Exception exceptionThree)
+            if (ex is FormatException exceptionThree)
             {
-                errorMessage = $"An error occured. Error Code: {ErrorCode.UnknownError:D}";
+                errorMessage = ex.Message + $" Error Code: {ErrorCode.FormatError:D}";
+                MessageBox.Show(errorMessage, "Error", MessageBoxButton.OK,
+                    MessageBoxImage.Error);
             }
 
         }
