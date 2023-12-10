@@ -23,7 +23,6 @@ namespace Scheduler
     public partial class MainWindow : Window
     {
         private List<string> selectedDays = new List<string>();
-        private List<string> selectedIntervals = new List<string>();
         private Entry entry = new Entry();
 
         public MainWindow()
@@ -40,19 +39,22 @@ namespace Scheduler
             customIntervvalWindow.Show();
 
         }
-        
+
         private void DaysListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            // clear existing items in arrary
-            selectedDays.Clear();
+            // Ensure entry.Days is initalized
+            entry.Days ??= new List<string>();
 
-            // get all of the selected days
-            foreach (var selectedDay in daysListBox.SelectedItems)
+            // clear existing items in the list
+            entry.Days.Clear();
+
+            // get all of the selcted days
+            foreach (var selectedDay in daysListBox.SelectedItems) 
             {
-                if (selectedDay is ListBoxItem listBoxItem)
+                if (selectedDay is ListBoxItem listBoxItem) 
                 {
                     string day = listBoxItem.Content.ToString();
-                    selectedDays.Add(day);
+                    entry.Days.Add(day);
                 }
             }
 
@@ -71,11 +73,30 @@ namespace Scheduler
         
         private void Test_button(Object sender, RoutedEventArgs e)
         {
-            //Debug.WriteLine("Selected Days: " + string.Join(", ", selectedDays));
-            //string.Join(",", entry.Days);
-            //entry.Interval = selectedDays
-            entry.formatDays();
-            entry.testEntry();
+            try
+            {
+                if (entry.Days != null)
+                {
+                    /*
+                    entry.Days = selectedDays;
+                    Debug.WriteLine(selectedDays);
+                    Debug.WriteLine("This array has data in here.");
+                    */
+
+                    foreach (var ele in entry.Days)
+                    {
+                        Debug.WriteLine($"{ele}");
+                    }
+                }
+                else
+                {
+                    throw new DaysMissingException("Zero days are selected. Please select a day.");
+                }
+            }
+            catch (DaysMissingException ex)
+            {
+                ErrorHandler.handleException(ex);
+            }
         }
 
     }
