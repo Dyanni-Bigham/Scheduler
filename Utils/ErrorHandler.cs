@@ -14,6 +14,7 @@ namespace Scheduler.Utils
         IncorrectNumberRangeError = 1001,
         MissingUnitError = 1002,
         FormatError = 1003,
+        MissingDaysError = 1004,
         // Add more error codes as needed
     }
     /**
@@ -66,6 +67,12 @@ namespace Scheduler.Utils
                     MessageBoxImage.Error);
             }
 
+            if (ex is DaysMissingException exceptionFour)
+            {
+                errorMessage = ex.Message + $" Error Code: {ErrorCode.MissingDaysError:D}";
+                MessageBox.Show(errorMessage, "Error", MessageBoxButton.OK,
+                    MessageBoxImage.Error);
+            }
         }
 
     }

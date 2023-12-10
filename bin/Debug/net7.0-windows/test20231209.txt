@@ -319,3 +319,6 @@ System.FormatException: The input string '' was not in a correct format.
 2023-12-09 16:04:06.176 -07:00 [ERR] An error occured Incorrect Range. Must be between 1 - 15 hours.
 Scheduler.Utils.IncorrectNumberRangeException: Incorrect Range. Must be between 1 - 15 hours.
    at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 67
+2023-12-09 17:01:58.178 -07:00 [ERR] An error occured Zero days are selected. Please select a day.
+Scheduler.Utils.DaysMissingException: Zero days are selected. Please select a day.
+   at Scheduler.MainWindow.Test_button(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\MainWindow.xaml.cs:line 93
