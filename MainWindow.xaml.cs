@@ -77,16 +77,8 @@ namespace Scheduler
             {
                 if (entry.Days != null)
                 {
-                    /*
-                    entry.Days = selectedDays;
-                    Debug.WriteLine(selectedDays);
-                    Debug.WriteLine("This array has data in here.");
-                    */
-
-                    foreach (var ele in entry.Days)
-                    {
-                        Debug.WriteLine($"{ele}");
-                    }
+                    // process the days
+                    Processor.handleMethod(entry);
                 }
                 else
                 {

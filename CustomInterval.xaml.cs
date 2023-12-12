@@ -74,7 +74,8 @@ namespace Scheduler
                     throw new FormatException("The time field is missing. Please enter a time.");
                 }
 
-                entry.testEntry();
+                // process the timeUnbit and intervals
+                Processor.handleMethod(entry);
             }
             catch (MissingUnitException ex)
             {
