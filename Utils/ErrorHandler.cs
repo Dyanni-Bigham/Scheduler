@@ -15,6 +15,7 @@ namespace Scheduler.Utils
         MissingUnitError = 1002,
         FormatError = 1003,
         MissingDaysError = 1004,
+        IntervalMissingError = 1005,
         // Add more error codes as needed
     }
     /**
@@ -39,40 +40,56 @@ namespace Scheduler.Utils
             Log.Error(ex, "An error occured {ErrorMessage}", ex.Message);
         }
 
+        public static void displayErrorMessage(Exception ex) 
+        {
+            string errorMessage;
+
+            if (ex is IncorrectNumberRangeException exception)
+            {
+                errorMessage = ex.Message + 
+                    $" Error Code: {ErrorCode.IncorrectNumberRangeError:D}";
+            }
+
+            else if (ex is MissingUnitException exceptionTwo)
+            {
+                errorMessage = ex.Message + 
+                    $" Error Code: {ErrorCode.MissingUnitError:D}";
+            }
+
+            else if (ex is FormatException exceptionThree)
+            {
+                errorMessage = ex.Message + 
+                    $"Error Code: {ErrorCode.FormatError:D}";
+            }
+
+            else if (ex is DaysMissingException exceptionFour)
+            {
+                errorMessage = ex.Message + 
+                    $"Error Code: {ErrorCode.MissingDaysError:D}";
+            }
+
+            else if (ex is IntervalMissingException exceptionFive)
+            {
+                errorMessage = ex.Message + 
+                    $"Error Code: {ErrorCode.IntervalMissingError:D}";
+            }
+
+            else
+            {
+                errorMessage = $"An unexpected error occured. " +
+                    $"Error Code: {ErrorCode.UnknownError:D}";
+            }
+
+            MessageBox.Show(errorMessage, "Error", MessageBoxButton.OK, 
+                MessageBoxImage.Error);
+        }
+
         public static void handleException(Exception ex)
         {
             LogError(ex);
 
             // Handle specific types of exceptions
-
-            //TODO: turn the error messages in the if statement to functions
-            if (ex is IncorrectNumberRangeException exception)
-            {
-                errorMessage = ex.Message + $" Error Code: {ErrorCode.IncorrectNumberRangeError:D}";
-                MessageBox.Show(errorMessage, "Error", MessageBoxButton.OK,
-                                MessageBoxImage.Error);
-            }
-
-            if (ex is MissingUnitException exceptionTwo)
-            {
-                errorMessage = ex.Message + $" Error Code: {ErrorCode.MissingUnitError:D}";
-                MessageBox.Show(errorMessage, "Error", MessageBoxButton.OK,
-                                MessageBoxImage.Error);
-            }
-
-            if (ex is FormatException exceptionThree)
-            {
-                errorMessage = ex.Message + $" Error Code: {ErrorCode.FormatError:D}";
-                MessageBox.Show(errorMessage, "Error", MessageBoxButton.OK,
-                    MessageBoxImage.Error);
-            }
-
-            if (ex is DaysMissingException exceptionFour)
-            {
-                errorMessage = ex.Message + $" Error Code: {ErrorCode.MissingDaysError:D}";
-                MessageBox.Show(errorMessage, "Error", MessageBoxButton.OK,
-                    MessageBoxImage.Error);
-            }
+            displayErrorMessage(ex);
         }
 
     }

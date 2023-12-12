@@ -24,6 +24,8 @@ namespace Scheduler.Utils
         // test method for debugging
         public void testEntry()
         {
+            formatDays();
+
             Debug.WriteLine("Selected Days:");
             Debug.WriteLine("==============\n");
             Debug.WriteLine(output);
@@ -36,7 +38,7 @@ namespace Scheduler.Utils
 
             Debug.WriteLine("\n\n");
 
-            Debug.WriteLine("Selected Interval:");
+            Debug.WriteLine("Time Unit:");
             Debug.WriteLine("==============\n");
             Debug.WriteLine(TimeUnit);
         }
