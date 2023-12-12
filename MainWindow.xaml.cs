@@ -75,17 +75,23 @@ namespace Scheduler
         {
             try
             {
-                if (entry.Days != null)
+                if (entry.Days == null)
                 {
-                    // process the days
-                    Processor.handleMethod(entry);
+                    throw new 
+                        DaysMissingException("Zero days are selected. Please select a day.");
                 }
-                else
+                if (entry.Interval == null)
                 {
-                    throw new DaysMissingException("Zero days are selected. Please select a day.");
+                    throw new IntervalMissingException("Missing an interval. Please select an interval.");
                 }
+
+                Processor.handleMethod(entry);
             }
             catch (DaysMissingException ex)
+            {
+                ErrorHandler.handleException(ex);
+            }
+            catch (IntervalMissingException ex)
             {
                 ErrorHandler.handleException(ex);
             }

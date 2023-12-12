@@ -7,3 +7,9 @@ Scheduler.Utils.DaysMissingException: Zero days are selected. Please select a da
 2023-12-11 18:25:35.307 -07:00 [ERR] An error occured Zero days are selected. Please select a day.
 Scheduler.Utils.DaysMissingException: Zero days are selected. Please select a day.
    at Scheduler.MainWindow.Test_button(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\MainWindow.xaml.cs:line 85
+2023-12-11 21:22:00.513 -07:00 [ERR] An error occured Zero days are selected. Please select a day.
+Scheduler.Utils.DaysMissingException: Zero days are selected. Please select a day.
+   at Scheduler.MainWindow.Test_button(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\MainWindow.xaml.cs:line 80
+2023-12-11 21:24:34.146 -07:00 [ERR] An error occured Missing an interval. Please select an interval.
+Scheduler.Utils.IntervalMissingException: Missing an interval. Please select an interval.
+   at Scheduler.MainWindow.Test_button(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\MainWindow.xaml.cs:line 85
