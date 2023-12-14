@@ -13,22 +13,27 @@ namespace Scheduler.Utils
         public List<string> Days 
         { get; set; }
 
+        public List<string> Apps 
+        { get; set; }
+
         public string TimeUnit
         { get; set; }
 
         public string Interval
         { get; set; }
 
-        public string output;
+        public string daysOutput;
+        public string appsOutput;
 
         // test method for debugging
         public void testEntry()
         {
             formatDays();
+            testApps();
 
             Debug.WriteLine("Selected Days:");
             Debug.WriteLine("==============\n");
-            Debug.WriteLine(output);
+            Debug.WriteLine(daysOutput);
 
             Debug.WriteLine("\n\n");
 
@@ -41,11 +46,22 @@ namespace Scheduler.Utils
             Debug.WriteLine("Time Unit:");
             Debug.WriteLine("==============\n");
             Debug.WriteLine(TimeUnit);
+
+            Debug.WriteLine("\n\n");
+
+            Debug.WriteLine("Selected applications");
+            Debug.WriteLine("==============\n");
+            Debug.WriteLine(appsOutput);
         }
 
         public void formatDays()
         {
-            output = string.Join(", ", Days);
+            daysOutput = string.Join(", ", Days);
+        }
+
+        public void testApps()
+        {
+            appsOutput = string.Join(", ", Apps);
         }
     }
 }
