@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Diagnostics;
 using Scheduler.Utils;
+using Scheduler.exceptions;
 
 namespace Scheduler
 {
@@ -70,19 +71,38 @@ namespace Scheduler
             }
 
         }
-        
+
+        private void appListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            entry.Apps ??= new List<string>();
+            entry.Apps.Clear();
+
+            foreach (var selectedApp in appListBox.SelectedItems)
+            {
+                if (selectedApp is ListBoxItem listBoxItem)
+                {
+                    string app = listBoxItem.Content.ToString();
+                    entry.Apps.Add(app);
+                }
+            }
+        }
+
         private void Test_button(Object sender, RoutedEventArgs e)
         {
             try
             {
                 if (entry.Days == null)
                 {
-                    throw new 
+                    throw new
                         DaysMissingException("Zero days are selected. Please select a day.");
                 }
                 if (entry.Interval == null)
                 {
                     throw new IntervalMissingException("Missing an interval. Please select an interval.");
+                }
+                if (entry.Apps == null)
+                {
+                    throw new MissingApplicationException("Please select an application.");
                 }
 
                 Processor.handleMethod(entry);
@@ -92,6 +112,10 @@ namespace Scheduler
                 ErrorHandler.handleException(ex);
             }
             catch (IntervalMissingException ex)
+            {
+                ErrorHandler.handleException(ex);
+            }
+            catch (MissingApplicationException ex)
             {
                 ErrorHandler.handleException(ex);
             }

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using Scheduler.exceptions;
 
 namespace Scheduler.Utils
 {
@@ -16,6 +17,7 @@ namespace Scheduler.Utils
         FormatError = 1003,
         MissingDaysError = 1004,
         IntervalMissingError = 1005,
+        MissingApplicationError = 1006
         // Add more error codes as needed
     }
     /**
@@ -72,6 +74,12 @@ namespace Scheduler.Utils
             {
                 errorMessage = ex.Message + 
                     $"Error Code: {ErrorCode.IntervalMissingError:D}";
+            }
+
+            else if (ex is MissingApplicationException exceptionSix)
+            {
+                errorMessage = ex.Message +
+                    $"Error Code: {ErrorCode.MissingApplicationError:D}";
             }
 
             else

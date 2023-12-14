@@ -40,7 +40,7 @@
             <ListBoxItem>2 Hour</ListBoxItem>
         </ListBox>
 
-        <ListBox Width="90" Grid.Column="2" Margin="24,45,23,116">
+        <ListBox x:Name="appListBox" SelectionChanged="appListBox_SelectionChanged" Width="90" Grid.Column="2" Margin="24,45,23,116">
             <ListBoxItem>HelloWorld</ListBoxItem>
         </ListBox>
 
