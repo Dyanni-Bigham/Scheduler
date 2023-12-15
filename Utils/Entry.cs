@@ -25,11 +25,14 @@ namespace Scheduler.Utils
         public string daysOutput;
         public string appsOutput;
 
-        // test method for debugging
+        // test method for debugging will delete later
         public void testEntry()
         {
-            formatDays();
-            testApps();
+            if (Days != null && Apps != null) 
+            {
+                formatDays();
+                testApps();
+            }
 
             Debug.WriteLine("Selected Days:");
             Debug.WriteLine("==============\n");

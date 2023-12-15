@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.DirectoryServices;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -75,6 +76,7 @@ namespace Scheduler
                 }
 
                 // process the timeUnbit and intervals
+                Debug.WriteLine("handler method getting handled in custom window"); // delete later
                 Processor.handleMethod(entry);
             }
             catch (MissingUnitException ex)
