@@ -13,6 +13,7 @@ namespace Scheduler.Utils
         {
             Debug.WriteLine("This data is being handled\n");
             entry.testEntry();
+            Debug.WriteLine("After data is handled."); // Delete Later
         }
     }
 }
