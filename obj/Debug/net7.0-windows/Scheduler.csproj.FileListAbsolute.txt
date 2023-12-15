@@ -26,3 +26,4 @@ C:\Users\dyann\Documents\Development\Scheduler\bin\Debug\net7.0-windows\Serilog.
 C:\Users\dyann\Documents\Development\Scheduler\bin\Debug\net7.0-windows\Serilog.Sinks.File.dll
 C:\Users\dyann\Documents\Development\Scheduler\obj\Debug\net7.0-windows\Scheduler.csproj.AssemblyReference.cache
 C:\Users\dyann\Documents\Development\Scheduler\obj\Debug\net7.0-windows\Scheduler.csproj.CopyComplete
+C:\Users\dyann\Documents\Development\Scheduler\bin\Debug\net7.0-windows\Newtonsoft.Json.dll
