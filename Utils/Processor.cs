@@ -23,11 +23,13 @@ namespace Scheduler.Utils
             // write to config file
             writeToFile(entry);
 
+            // Testing to see if I can call the applicatin using config file
+
         }
 
         public static void writeToFile(Entry entry)
         {
-            // write to a .json file that is stored /config
+            // write to a .json file that is stored config
             
             var configuration = new
             {
@@ -52,10 +54,14 @@ namespace Scheduler.Utils
             {
                 Debug.WriteLine(ex.ToString());
             }
-            
+ 
+        }
 
-            // print out the output of the config file
+        public static void runApp()
+        {
+            // read the config file to get the application
 
+            // read the 
         }
     }
 }

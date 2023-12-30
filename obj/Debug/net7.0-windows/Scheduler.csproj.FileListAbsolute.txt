@@ -27,3 +27,12 @@ C:\Users\dyann\Documents\Development\Scheduler\bin\Debug\net7.0-windows\Serilog.
 C:\Users\dyann\Documents\Development\Scheduler\obj\Debug\net7.0-windows\Scheduler.csproj.AssemblyReference.cache
 C:\Users\dyann\Documents\Development\Scheduler\obj\Debug\net7.0-windows\Scheduler.csproj.CopyComplete
 C:\Users\dyann\Documents\Development\Scheduler\bin\Debug\net7.0-windows\Newtonsoft.Json.dll
+C:\Users\dyann\Documents\Development\Scheduler\output\Debug\net7.0-windows\Scheduler.exe
+C:\Users\dyann\Documents\Development\Scheduler\output\Debug\net7.0-windows\Scheduler.deps.json
+C:\Users\dyann\Documents\Development\Scheduler\output\Debug\net7.0-windows\Scheduler.runtimeconfig.json
+C:\Users\dyann\Documents\Development\Scheduler\output\Debug\net7.0-windows\Scheduler.dll
+C:\Users\dyann\Documents\Development\Scheduler\output\Debug\net7.0-windows\Scheduler.pdb
+C:\Users\dyann\Documents\Development\Scheduler\output\Debug\net7.0-windows\Newtonsoft.Json.dll
+C:\Users\dyann\Documents\Development\Scheduler\output\Debug\net7.0-windows\Serilog.dll
+C:\Users\dyann\Documents\Development\Scheduler\output\Debug\net7.0-windows\Serilog.Sinks.Console.dll
+C:\Users\dyann\Documents\Development\Scheduler\output\Debug\net7.0-windows\Serilog.Sinks.File.dll
