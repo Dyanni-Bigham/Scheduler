@@ -1,0 +1,11 @@
+{
+  "Days": [
+    "Monday",
+    "Wednesday",
+    "Saturday"
+  ],
+  "Interval": "30 Minutes",
+  "Applications": [
+    "HelloWorld"
+  ]
+}
