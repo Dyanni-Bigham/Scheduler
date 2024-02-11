@@ -41,7 +41,7 @@
         </ListBox>
 
         <ListBox x:Name="appListBox" SelectionChanged="appListBox_SelectionChanged" Width="90" Grid.Column="2" Margin="24,45,23,116">
-            <ListBoxItem>HelloWorld</ListBoxItem>
+            <ListBoxItem>HelloWPFAPP</ListBoxItem>
         </ListBox>
 
         <Button Height="20" Grid.Column="1" Margin="19,164,23,116" Click="Summon_CustomInterval">Custom Interval</Button>
