@@ -6,6 +6,8 @@ using System.Text;
 using System.IO;
 using Newtonsoft.Json;
 using System.Threading.Tasks;
+using Newtonsoft.Json.Linq;
+
 
 namespace Scheduler.Utils
 {
@@ -23,13 +25,16 @@ namespace Scheduler.Utils
             // write to config file
             writeToFile(entry);
 
+            TimeHandling.scheduleTask();
+
             // Testing to see if I can call the applicatin using config file
+            runApp();
 
         }
 
         public static void writeToFile(Entry entry)
         {
-            // write to a .json file that is stored config
+            // write to a .json file that stores the config
             
             var configuration = new
             {
@@ -60,8 +65,43 @@ namespace Scheduler.Utils
         public static void runApp()
         {
             // read the config file to get the application
+            string filePath = "config.json";
 
-            // read the 
+            string jsonContent = File.ReadAllText(filePath);
+
+            dynamic config = JsonConvert.DeserializeObject(jsonContent);
+
+            if (config.Applications != null && config.Applications is JArray)
+            {
+                string application = config.Applications[0]?.ToString();
+                string applicationPath = $@"C:\Users\dyann\Documents\Development\HelloWPFApp\HelloWPFApp\bin\Release\net7.0-windows\{application}.exe";
+
+                Debug.WriteLine("Getting the application field");
+                Debug.WriteLine($"Application: {application}");
+
+                // Executing the application
+                ProcessStartInfo startInfo = new ProcessStartInfo { FileName = applicationPath };
+
+                // Start the process
+                using (Process process = new Process { StartInfo = startInfo})
+                {
+                    process.Start();
+                    process.WaitForExit();
+                }
+
+                // filepath to list of application(s) to execute
+            }
+            else
+            {
+                Debug.WriteLine("Error");
+            }
+
+        }
+
+        public static void showTime()
+        {
+            DateTime currentDateTime = DateTime.Now;
+            Debug.WriteLine($"Current Date amd Time: {currentDateTime} on {DateTime.Now.DayOfWeek}");
         }
     }
 }

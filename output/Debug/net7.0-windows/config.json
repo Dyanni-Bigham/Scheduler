@@ -1,11 +1,11 @@
 {
   "Days": [
-    "Monday",
-    "Wednesday",
-    "Saturday"
+    "Friday",
+    "Tuesday",
+    "Wednesday"
   ],
   "Interval": "30 Minutes",
   "Applications": [
-    "HelloWorld"
+    "HelloWPFAPP"
   ]
 }
