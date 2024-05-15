@@ -5,7 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Scheduler"
         mc:Ignorable="d"
-        Title="Scheduler" Height="270" Width="430" ResizeMode="NoResize">
+        Title="Scheduler" Height="270" Width="430" ResizeMode="CanMinimize">
+
+    <Window.Resources>
+        <ResourceDictionary xmlns:tb="http://www.hardcodet.net/taskbar">
+            <!-- Globally declared notify icon -->
+            <tb:TaskbarIcon x:Key="MyNotifyIcon"
+                            IconSource="./icon.ico"
+                            ToolTipText="hello world"
+                            Visibility="Visible" />
+        </ResourceDictionary>
+    </Window.Resources>
 
     <Grid Margin="10">
 
@@ -43,8 +53,6 @@
         <ListBox x:Name="appListBox" SelectionChanged="appListBox_SelectionChanged" Width="90" Grid.Column="2" Margin="24,45,23,116">
             <ListBoxItem>HelloWPFAPP</ListBoxItem>
         </ListBox>
-
-        <Button Height="20" Grid.Column="1" Margin="19,164,23,116" Click="Summon_CustomInterval">Custom Interval</Button>
 
         <Button Grid.Column="1" Margin="36,185,40,90" Click="Test_button">Test</Button>
     </Grid>
