@@ -8,6 +8,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using Forms = System.Windows.Forms;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
@@ -25,11 +26,30 @@ namespace Scheduler
     {
         private List<string> selectedDays = new List<string>();
         private Entry entry = new Entry();
+        private Forms.NotifyIcon notifyIcon;
 
         public MainWindow()
         {
             InitializeComponent();
+            notifyIcon = new Forms.NotifyIcon();
+            notifyIcon.Icon = new System.Drawing.Icon("./icon.ico");
+            notifyIcon.Text = "Scheduler";
+            notifyIcon.Click += NotifyIcon_Click;
+            notifyIcon.Visible = true;
+        }
 
+        private void NotifyIcon_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == WindowState.Minimized)
+            {
+                this.WindowState = WindowState.Normal; // Restore the window
+                this.Show();
+                this.Activate(); // Activate the window
+            }
+            else
+            {
+                this.WindowState = WindowState.Minimized; // Minimize the window
+            }
         }
 
         private void Summon_CustomInterval(object sender, RoutedEventArgs e)

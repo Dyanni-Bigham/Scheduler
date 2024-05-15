@@ -1,0 +1,14 @@
+2024-05-11 09:54:05.271 -07:00 [ERR] An error occured The input string '' was not in a correct format.
+System.FormatException: The input string '' was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, ReadOnlySpan`1 value, TypeCode type)
+   at System.Int32.Parse(String s)
+   at Scheduler.CustomInterval.btnSubmit_Click(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\CustomInterval.xaml.cs:line 53
+2024-05-11 10:20:20.287 -07:00 [ERR] An error occured Please select an application.
+Scheduler.exceptions.MissingApplicationException: Please select an application.
+   at Scheduler.MainWindow.Test_button(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\MainWindow.xaml.cs:line 105
+2024-05-11 10:20:36.770 -07:00 [ERR] An error occured Please select an application.
+Scheduler.exceptions.MissingApplicationException: Please select an application.
+   at Scheduler.MainWindow.Test_button(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\MainWindow.xaml.cs:line 105
+2024-05-11 10:20:59.138 -07:00 [ERR] An error occured Zero days are selected. Please select a day.
+Scheduler.Utils.DaysMissingException: Zero days are selected. Please select a day.
+   at Scheduler.MainWindow.Test_button(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\MainWindow.xaml.cs:line 96
