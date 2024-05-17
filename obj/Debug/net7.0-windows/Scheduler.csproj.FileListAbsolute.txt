@@ -40,3 +40,4 @@ C:\Users\dyann\Documents\Development\Scheduler\output\Debug\net7.0-windows\Micro
 C:\Users\dyann\Documents\Development\Scheduler\output\Debug\net7.0-windows\Quartz.dll
 C:\Users\dyann\Documents\Development\Scheduler\obj\Debug\net7.0-windows\Scheduler.csproj.ResolveComReference.cache
 C:\Users\dyann\Documents\Development\Scheduler\output\Debug\net7.0-windows\Hardcodet.NotifyIcon.Wpf.dll
+C:\Users\dyann\Documents\Development\Scheduler\obj\Debug\net7.0-windows\Interop.IWshRuntimeLibrary.dll

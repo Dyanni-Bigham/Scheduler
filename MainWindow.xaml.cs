@@ -13,9 +13,12 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Win32;
 using System.Diagnostics;
 using Scheduler.Utils;
 using Scheduler.exceptions;
+using System.Runtime.InteropServices;
+using System.IO;
 
 namespace Scheduler
 {
@@ -31,11 +34,14 @@ namespace Scheduler
         public MainWindow()
         {
             InitializeComponent();
+
+            // Tray Icon setup
             notifyIcon = new Forms.NotifyIcon();
             notifyIcon.Icon = new System.Drawing.Icon("./icon.ico");
             notifyIcon.Text = "Scheduler";
             notifyIcon.Click += NotifyIcon_Click;
             notifyIcon.Visible = true;
+            //////////////////////////////////////////////////////
         }
 
         private void NotifyIcon_Click(object sender, EventArgs e)
@@ -70,9 +76,9 @@ namespace Scheduler
             entry.Days.Clear();
 
             // get all of the selcted days
-            foreach (var selectedDay in daysListBox.SelectedItems) 
+            foreach (var selectedDay in daysListBox.SelectedItems)
             {
-                if (selectedDay is ListBoxItem listBoxItem) 
+                if (selectedDay is ListBoxItem listBoxItem)
                 {
                     string day = listBoxItem.Content.ToString();
                     entry.Days.Add(day);
@@ -91,7 +97,7 @@ namespace Scheduler
             }
 
         }
-
+        /*
         private void appListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             entry.Apps ??= new List<string>();
@@ -106,6 +112,7 @@ namespace Scheduler
                 }
             }
         }
+        */
 
         private void Test_button(Object sender, RoutedEventArgs e)
         {
@@ -120,10 +127,12 @@ namespace Scheduler
                 {
                     throw new IntervalMissingException("Missing an interval. Please select an interval.");
                 }
+                /*
                 if (entry.Apps == null)
                 {
                     throw new MissingApplicationException("Please select an application.");
                 }
+                */
 
                 Processor.handleMethod(entry);
             }
@@ -141,5 +150,72 @@ namespace Scheduler
             }
         }
 
+        private void cb1_Checked(object sender, RoutedEventArgs e)
+        {
+            // Select all days
+            foreach (ListBoxItem item in daysListBox.Items)
+            {
+
+                item.IsSelected = true;
+                entry.Days.Add(item.Content.ToString());
+            }
+        }
+
+        private void cb1_Unchecked(object sender, RoutedEventArgs e)
+        {
+            // Deselect all days
+            foreach (ListBoxItem item in daysListBox.Items)
+            {
+                item.IsSelected = false;
+                entry.Days.Clear();
+            }
+        }
+
+        private void App_Select(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Shortcut files (*.lnk)|*.lnk";
+            if (openFileDialog.ShowDialog() == true)
+            {
+                string shortcutPath = openFileDialog.FileName;
+                string targetPath = ResolveShortcut(shortcutPath);
+                if (!string.IsNullOrEmpty(targetPath))
+                {
+                    //MessageBox.Show("Shortcut target: " + targetPath);
+
+                    ExecuteFile(targetPath);
+                }
+                else
+                {
+                    MessageBox.Show("Failed to resolve shortcut.");
+                }
+            }
+        }
+
+        private string ResolveShortcut(string shortcutPath)
+        {
+            try
+            {
+                var shell = new IWshRuntimeLibrary.WshShell();
+                var shortcut = shell.CreateShortcut(shortcutPath) as IWshRuntimeLibrary.IWshShortcut;
+                return shortcut?.TargetPath;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        private void ExecuteFile(string filePath)
+        {
+            try
+            {
+                Process.Start(filePath);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error executing file: " + ex.Message);
+            }
+        }
     }
 }

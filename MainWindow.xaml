@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Scheduler"
         mc:Ignorable="d"
-        Title="Scheduler" Height="270" Width="430" ResizeMode="CanMinimize">
+        Title="Scheduler" Height="308" Width="584" ResizeMode="CanMinimize">
 
     <Window.Resources>
         <ResourceDictionary xmlns:tb="http://www.hardcodet.net/taskbar">
@@ -17,10 +17,11 @@
         </ResourceDictionary>
     </Window.Resources>
 
-    <Grid Margin="10">
+    <Grid Margin="10,10,10,10">
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="300" />
+            <RowDefinition Height="130.799" />
+            <RowDefinition Height="169.201"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -29,11 +30,10 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <Label HorizontalContentAlignment="Center" Padding="20" FontSize="16">Days</Label>
-        <Label HorizontalContentAlignment="Center" Padding="20" FontSize="16" Grid.Column="1">Intervals</Label>
-        <Label HorizontalContentAlignment="Center" Padding="20" FontSize="16" Grid.Column="2">Applications</Label>
+        <Label HorizontalContentAlignment="Center" Padding="20" FontSize="16" Margin="25,0,25,66">Days</Label>
+        <Label HorizontalContentAlignment="Center" Padding="20" FontSize="16" Grid.Column="1" Grid.RowSpan="2">Intervals</Label>
 
-        <ListBox x:Name="daysListBox" SelectionMode="Multiple" SelectionChanged="DaysListBox_SelectionChanged" Grid.Column="0"  Width="90" Margin="28,50,19,98">
+        <ListBox x:Name="daysListBox" SelectionMode="Multiple" SelectionChanged="DaysListBox_SelectionChanged" Grid.Column="0"  Width="90" Margin="36,50,28,98" Grid.RowSpan="2">
             <ListBoxItem>Monday</ListBoxItem>
             <ListBoxItem>Tuesday</ListBoxItem>
             <ListBoxItem>Wednesday</ListBoxItem>
@@ -43,18 +43,20 @@
             <ListBoxItem>Sunday</ListBoxItem>
         </ListBox>
 
-        <ListBox x:Name="intervalsListBox" SelectionChanged="IntervalsListBox_SelectionChanged" Width="80" Grid.Column="1" Margin="26,50,30,161">
+        <CheckBox x:Name="cb1" Grid.Column="0" Margin="42,84,0,66"
+            Content="Select All Days" Checked="cb1_Checked" Unchecked="cb1_Unchecked" Grid.Row="1"/>
+
+        <ListBox x:Name="intervalsListBox" SelectionChanged="IntervalsListBox_SelectionChanged" Grid.Column="1" Margin="26,50,27,142" Grid.RowSpan="2">
             <ListBoxItem>15 Minutes</ListBoxItem>
             <ListBoxItem>30 Minutes</ListBoxItem>
             <ListBoxItem>1 Hour</ListBoxItem>
             <ListBoxItem>2 Hour</ListBoxItem>
+            <ListBoxItem>Daily</ListBoxItem>
         </ListBox>
 
-        <ListBox x:Name="appListBox" SelectionChanged="appListBox_SelectionChanged" Width="90" Grid.Column="2" Margin="24,45,23,116">
-            <ListBoxItem>HelloWPFAPP</ListBoxItem>
-        </ListBox>
+        <Button Grid.Column="1" Margin="36,54,40,90" Click="Test_button" Grid.Row="1">Test</Button>
 
-        <Button Grid.Column="1" Margin="36,185,40,90" Click="Test_button">Test</Button>
+        <Button Grid.Column="2" Margin="41,104,40,169" Click="App_Select" Grid.RowSpan="2">Select Application</Button>
     </Grid>
 
 </Window>
