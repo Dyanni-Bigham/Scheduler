@@ -25,10 +25,10 @@ namespace Scheduler.Utils
             // write to config file
             writeToFile(entry);
 
-            TimeHandling.scheduleTask();
+            //TimeHandling.scheduleTask();
 
             // Testing to see if I can call the applicatin using config file
-            runApp();
+            //runApp();
 
         }
 

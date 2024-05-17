@@ -1,11 +1,10 @@
 {
   "Days": [
     "Monday",
-    "Wednesday",
-    "Sunday"
+    "Thursday"
   ],
-  "Interval": "1 Hour",
+  "Interval": "2 Hour",
   "Applications": [
-    "HelloWPFAPP"
+    "C:\\Users\\dyann\\AppData\\Roaming\\Spotify\\Spotify.exe"
   ]
 }

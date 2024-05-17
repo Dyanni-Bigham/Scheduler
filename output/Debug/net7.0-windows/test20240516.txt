@@ -1,0 +1,3 @@
+2024-05-16 18:05:02.163 -07:00 [ERR] An error occured Missing an interval. Please select an interval.
+Scheduler.Utils.IntervalMissingException: Missing an interval. Please select an interval.
+   at Scheduler.MainWindow.Test_button(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\MainWindow.xaml.cs:line 128

@@ -116,6 +116,9 @@ namespace Scheduler
 
         private void Test_button(Object sender, RoutedEventArgs e)
         {
+
+            MessageBox.Show("Days, intervals, and apps are being sent to the backend");
+            /*
             try
             {
                 if (entry.Days == null)
@@ -127,13 +130,15 @@ namespace Scheduler
                 {
                     throw new IntervalMissingException("Missing an interval. Please select an interval.");
                 }
-                /*
+                
                 if (entry.Apps == null)
                 {
                     throw new MissingApplicationException("Please select an application.");
                 }
-                */
-
+                
+                Debug.WriteLine(entry.Apps);
+                Debug.WriteLine(entry.Interval);
+                Debug.WriteLine(entry.Days);
                 Processor.handleMethod(entry);
             }
             catch (DaysMissingException ex)
@@ -148,6 +153,9 @@ namespace Scheduler
             {
                 ErrorHandler.handleException(ex);
             }
+            */
+
+
         }
 
         private void cb1_Checked(object sender, RoutedEventArgs e)
@@ -175,6 +183,10 @@ namespace Scheduler
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Shortcut files (*.lnk)|*.lnk";
+
+            entry.Apps ??= new List<string>();
+            entry.Apps.Clear();
+
             if (openFileDialog.ShowDialog() == true)
             {
                 string shortcutPath = openFileDialog.FileName;
@@ -182,6 +194,7 @@ namespace Scheduler
                 if (!string.IsNullOrEmpty(targetPath))
                 {
                     //MessageBox.Show("Shortcut target: " + targetPath);
+                    entry.Apps.Add(targetPath);
 
                     ExecuteFile(targetPath);
                 }
