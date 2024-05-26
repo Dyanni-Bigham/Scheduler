@@ -1,10 +1,14 @@
-{
-  "Days": [
-    "Monday",
-    "Thursday"
-  ],
-  "Interval": "2 Hour",
-  "Applications": [
-    "C:\\Users\\dyann\\AppData\\Roaming\\Spotify\\Spotify.exe"
-  ]
-}
+[
+  {
+    "Days": [
+      "Monday",
+      "Tuesday",
+      "Friday"
+    ],
+    "Apps": [
+      "C:\\WINDOWS\\system32\\control.exe"
+    ],
+    "TimeUnit": null,
+    "Interval": "1 Hour"
+  }
+]

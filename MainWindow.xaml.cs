@@ -35,29 +35,56 @@ namespace Scheduler
         {
             InitializeComponent();
 
-            // Tray Icon setup
+            /////////////////// Tray Icon setup ///////////////////
             notifyIcon = new Forms.NotifyIcon();
             notifyIcon.Icon = new System.Drawing.Icon("./icon.ico");
             notifyIcon.Text = "Scheduler";
-            notifyIcon.Click += NotifyIcon_Click;
+            notifyIcon.MouseUp += NotifyIcon_MouseUp;
+
+            // Context Menu Strip setup
+            notifyIcon.ContextMenuStrip = new Forms.ContextMenuStrip();
+
+            // Add "Run Scheduler" menu item
+            Forms.ToolStripMenuItem runSchedulerMenuItem =
+                new Forms.ToolStripMenuItem("Run Scheduler");
+            runSchedulerMenuItem.Click += RunScheduler_Click;
+            notifyIcon.ContextMenuStrip.Items.Add(runSchedulerMenuItem);
+
+            // Add "Stop Scheduler" menu item
+            Forms.ToolStripMenuItem stopSchedulerMenuItem =
+                new Forms.ToolStripMenuItem("Stop Scheduler");
+            stopSchedulerMenuItem.Click += StopScheduler_Click;
+            notifyIcon.ContextMenuStrip.Items.Add(stopSchedulerMenuItem);
+
             notifyIcon.Visible = true;
+
             //////////////////////////////////////////////////////
         }
 
-        private void NotifyIcon_Click(object sender, EventArgs e)
+        private void NotifyIcon_MouseUp(object sender, Forms.MouseEventArgs e)
         {
-            if (this.WindowState == WindowState.Minimized)
+            if (e.Button == Forms.MouseButtons.Right)
             {
-                this.WindowState = WindowState.Normal; // Restore the window
-                this.Show();
-                this.Activate(); // Activate the window
+                // Show the context menu when right-clicked
+                notifyIcon.ContextMenuStrip.Show();
             }
-            else
+            else if (e.Button == Forms.MouseButtons.Left)
             {
-                this.WindowState = WindowState.Minimized; // Minimize the window
+                // Restore or minimize the window when left-clicked
+                if (this.WindowState == WindowState.Minimized)
+                {
+                    this.WindowState = WindowState.Normal; // Restore window
+                    this.Show();
+                    this.Activate();
+                    this.Activate();
+                }
+                else
+                {
+                    this.WindowState = WindowState.Minimized;
+                }
             }
         }
-
+        /*
         private void Summon_CustomInterval(object sender, RoutedEventArgs e)
         {
 
@@ -66,7 +93,17 @@ namespace Scheduler
             customIntervvalWindow.Show();
 
         }
+        */
 
+        private void RunScheduler_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Scheduler is now running");
+        }
+
+        private void StopScheduler_Click(Object sender, EventArgs e)
+        {
+            MessageBox.Show("Scheduler has stopped.");
+        }
         private void DaysListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             // Ensure entry.Days is initalized
@@ -114,11 +151,11 @@ namespace Scheduler
         }
         */
 
-        private void Test_button(Object sender, RoutedEventArgs e)
+        private void Save_button(Object sender, RoutedEventArgs e)
         {
 
-            MessageBox.Show("Days, intervals, and apps are being sent to the backend");
-            /*
+            //MessageBox.Show("Days, intervals, and apps are being sent to the backend");
+
             try
             {
                 if (entry.Days == null)
@@ -130,15 +167,15 @@ namespace Scheduler
                 {
                     throw new IntervalMissingException("Missing an interval. Please select an interval.");
                 }
-                
+
                 if (entry.Apps == null)
                 {
                     throw new MissingApplicationException("Please select an application.");
                 }
-                
-                Debug.WriteLine(entry.Apps);
+
+                Debug.WriteLine(String.Join(" ", entry.Apps)); //TODO: Bug that when the user opens up file explorer and doesn't select this is treated as a success when it is not
                 Debug.WriteLine(entry.Interval);
-                Debug.WriteLine(entry.Days);
+                Debug.WriteLine(String.Join(", ", entry.Days));
                 Processor.handleMethod(entry);
             }
             catch (DaysMissingException ex)
@@ -153,7 +190,7 @@ namespace Scheduler
             {
                 ErrorHandler.handleException(ex);
             }
-            */
+
 
 
         }
@@ -195,8 +232,7 @@ namespace Scheduler
                 {
                     //MessageBox.Show("Shortcut target: " + targetPath);
                     entry.Apps.Add(targetPath);
-
-                    ExecuteFile(targetPath);
+                    ;
                 }
                 else
                 {
@@ -219,16 +255,5 @@ namespace Scheduler
             }
         }
 
-        private void ExecuteFile(string filePath)
-        {
-            try
-            {
-                Process.Start(filePath);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error executing file: " + ex.Message);
-            }
-        }
     }
 }

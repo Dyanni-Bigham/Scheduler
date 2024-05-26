@@ -1,3 +1,0 @@
-2024-05-09 17:05:45.909 -07:00 [ERR] An error occured Zero days are selected. Please select a day.
-Scheduler.Utils.DaysMissingException: Zero days are selected. Please select a day.
-   at Scheduler.MainWindow.Test_button(Object sender, RoutedEventArgs e) in C:\Users\dyann\Documents\Development\Scheduler\MainWindow.xaml.cs:line 96

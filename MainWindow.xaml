@@ -54,9 +54,9 @@
             <ListBoxItem>Daily</ListBoxItem>
         </ListBox>
 
-        <Button Grid.Column="1" Margin="36,54,40,90" Click="Test_button" Grid.Row="1">Test</Button>
+        <Button Grid.Column="2" Margin="40,125,36,150" Click="Save_button" Grid.RowSpan="2">Save Config</Button>
 
-        <Button Grid.Column="2" Margin="41,104,40,169" Click="App_Select" Grid.RowSpan="2">Select Application</Button>
+        <Button Grid.Column="2" Margin="40,52,40,52" Click="App_Select">Select Application</Button>
     </Grid>
 
 </Window>

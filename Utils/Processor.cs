@@ -23,7 +23,11 @@ namespace Scheduler.Utils
             */
 
             // write to config file
-            writeToFile(entry);
+            string result = writeToFile(entry); // have this return the config.json file
+            //processFile(result);
+
+            //TODO pass the config file to the processer program
+            // Create a method that will take the config file and execute the process application
 
             //TimeHandling.scheduleTask();
 
@@ -31,37 +35,58 @@ namespace Scheduler.Utils
             //runApp();
 
         }
-
-        public static void writeToFile(Entry entry)
+        public static string writeToFile(Entry entry)
         {
-            // write to a .json file that stores the config
-            
-            var configuration = new
-            {
-                Days = entry.Days,
-                Interval = entry.Interval,
-                Applications = entry.Apps
-            };
-
             string configFilePath = "config.json";
+            List<Entry> entries = new List<Entry>();
 
             try
             {
-                // Serialize the object to JSON format
-                string content = JsonConvert.SerializeObject
-                    (configuration, Formatting.Indented);
+                // Read the existing file if it exists
+                if (File.Exists(configFilePath))
+                {
+                    string existingContent = File.ReadAllText(configFilePath);
 
-                File.WriteAllText(configFilePath, content);
+                    // Try to deserialize to a list of entries
+                    try
+                    {
+                        entries = JsonConvert.DeserializeObject<List<Entry>>(existingContent) ?? new List<Entry>();
+                    }
+                    catch (JsonSerializationException)
+                    {
+                        // If it fails, try to deserialize a single entry
+                        Entry singleEntry = JsonConvert.DeserializeObject<Entry>(existingContent);
+                        if (singleEntry != null)
+                        {
+                            entries.Add(singleEntry);
+                        }
+                    }
+                }
 
-                Debug.WriteLine("Data successfully written to file.");
+                // Add the new entry to the list
+                entries.Add(entry);
+
+                // Serialize the updated list to JSON format
+                string updatedContent = JsonConvert.SerializeObject(entries, Formatting.Indented);
+
+                // Write the updated content back to the file
+                File.WriteAllText(configFilePath, updatedContent);
+
+                Console.WriteLine("Data successfully written to file.");
             }
-            catch (IOException ex) 
+            catch (IOException ex)
             {
-                Debug.WriteLine(ex.ToString());
+                Console.WriteLine(ex.ToString());
             }
- 
-        }
 
+            return configFilePath;
+        }
+        public static void processFile(string config)
+        {
+            // This method will execute the 
+            Debug.WriteLine("Calling processFile method");
+            Debug.WriteLine(config);
+        }
         public static void runApp()
         {
             // read the config file to get the application
