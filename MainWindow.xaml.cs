@@ -37,7 +37,8 @@ namespace Scheduler
 
             // Tray Icon setup
             notifyIcon = new Forms.NotifyIcon();
-            notifyIcon.Icon = new System.Drawing.Icon("./icon.ico");
+            string iconPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "icon.ico");
+            notifyIcon.Icon = new System.Drawing.Icon(iconPath);
             notifyIcon.Text = "Scheduler";
             notifyIcon.Click += NotifyIcon_Click;
             notifyIcon.Visible = true;
