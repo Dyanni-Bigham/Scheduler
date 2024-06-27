@@ -35,7 +35,7 @@ namespace Scheduler
         {
             InitializeComponent();
 
-            // Tray Icon setup
+            // Tray Icon setup //
             notifyIcon = new Forms.NotifyIcon();
             string iconPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "icon.ico");
             notifyIcon.Icon = new System.Drawing.Icon(iconPath);
@@ -43,6 +43,19 @@ namespace Scheduler
             notifyIcon.Click += NotifyIcon_Click;
             notifyIcon.Visible = true;
             //////////////////////////////////////////////////////
+            
+            // Interval set up //
+            // Add hours from 00:00 to 23:45 //
+            for (int hour = 0; hour < 24; hour++)
+            {
+                for (int minute = 0; minute < 60; minute += 15)
+                {
+                    string hourStr = hour.ToString().PadLeft(2, '0');
+                    string minuteStr = minute.ToString().PadLeft(2, '0');
+                    intervalsListBox.Items.Add($"{hourStr}:{minuteStr}");
+                }
+            }
+            ///////////////////////////////////
         }
 
         private void NotifyIcon_Click(object sender, EventArgs e)
@@ -59,6 +72,7 @@ namespace Scheduler
             }
         }
 
+        /*
         private void Summon_CustomInterval(object sender, RoutedEventArgs e)
         {
 
@@ -67,6 +81,7 @@ namespace Scheduler
             customIntervvalWindow.Show();
 
         }
+        */
 
         private void DaysListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -88,6 +103,7 @@ namespace Scheduler
 
         }
 
+        /*
         private void IntervalsListBox_SelectionChanged(Object sender, SelectionChangedEventArgs e)
         {
             var selectedInterval = intervalsListBox.SelectedItem;
@@ -96,7 +112,26 @@ namespace Scheduler
             {
                 entry.Interval = listBoxItem.Content.ToString();
             }
+            else
+            {
+                Debug.WriteLine("This is a null value even though an interval is selected");
+            }
 
+        }
+        */
+
+        private void IntervalsListBox_SelectionChanged(Object sender, SelectionChangedEventArgs e)
+        {
+            var selectedInterval = intervalsListBox.SelectedItem as string;
+
+            if (selectedInterval != null)
+            {
+                entry.Interval = selectedInterval;
+            }
+            else
+            {
+                Debug.WriteLine("No interval selected.");
+            }
         }
         /*
         private void appListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -118,8 +153,8 @@ namespace Scheduler
         private void Test_button(Object sender, RoutedEventArgs e)
         {
 
-            MessageBox.Show("Days, intervals, and apps are being sent to the backend");
-            /*
+            //MessageBox.Show("Days, intervals, and apps are being sent to the backend");
+            
             try
             {
                 if (entry.Days == null)
@@ -137,10 +172,10 @@ namespace Scheduler
                     throw new MissingApplicationException("Please select an application.");
                 }
                 
-                Debug.WriteLine(entry.Apps);
-                Debug.WriteLine(entry.Interval);
-                Debug.WriteLine(entry.Days);
-                Processor.handleMethod(entry);
+                //Debug.WriteLine(entry.Apps);
+                //Debug.WriteLine(entry.Interval);
+                //Debug.WriteLine(entry.Days);
+                Processor.HandleMethod(entry);
             }
             catch (DaysMissingException ex)
             {
@@ -154,7 +189,7 @@ namespace Scheduler
             {
                 ErrorHandler.handleException(ex);
             }
-            */
+            
 
 
         }
@@ -197,7 +232,7 @@ namespace Scheduler
                     //MessageBox.Show("Shortcut target: " + targetPath);
                     entry.Apps.Add(targetPath);
 
-                    ExecuteFile(targetPath);
+                    //ExecuteFile(targetPath);
                 }
                 else
                 {

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "z8sNqQfd8XLmVPQS0sDDdgrxRY8kHFOkTgSEMcWxOVoB+s2hEN6fWm0WLbDuQKtHYLYS0HxlrkQ+ohh3kiHoQA==",
+  "dgSpecHash": "DgnGPS7Qdso=",
   "success": true,
-  "projectFilePath": "C:\\Users\\dyann\\Documents\\Development\\Scheduler\\Scheduler.csproj",
+  "projectFilePath": "C:\\Users\\dyann\\Documents\\Development\\Scheduler-main\\Scheduler.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dyann\\.nuget\\packages\\hardcodet.notifyicon.wpf\\1.1.0\\hardcodet.notifyicon.wpf.1.1.0.nupkg.sha512",
     "C:\\Users\\dyann\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\2.1.1\\microsoft.extensions.logging.abstractions.2.1.1.nupkg.sha512",

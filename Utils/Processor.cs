@@ -14,7 +14,7 @@ namespace Scheduler.Utils
     public class Processor
     {
         // rename this method to handleEntry
-        public static void handleMethod(Entry entry)
+        public static void HandleMethod(Entry entry)
         {
             /*
             Debug.WriteLine("This data is being handled\n");
@@ -23,7 +23,7 @@ namespace Scheduler.Utils
             */
 
             // write to config file
-            writeToFile(entry);
+            WriteToFile(entry);
 
             //TimeHandling.scheduleTask();
 
@@ -31,36 +31,57 @@ namespace Scheduler.Utils
             //runApp();
 
         }
-
-        public static void writeToFile(Entry entry)
+        public static void WriteToFile(Entry entry)
         {
-            // write to a .json file that stores the config
-            
-            var configuration = new
-            {
-                Days = entry.Days,
-                Interval = entry.Interval,
-                Applications = entry.Apps
-            };
-
             string configFilePath = "config.json";
 
             try
             {
-                // Serialize the object to JSON format
-                string content = JsonConvert.SerializeObject
-                    (configuration, Formatting.Indented);
+                // Initialize the list of entries
+                List<Entry> existingEntries = new List<Entry>();
 
+                // Check if the file exists and read the content
+                if (File.Exists(configFilePath))
+                {
+                    string existingContent = File.ReadAllText(configFilePath);
+                    if (!string.IsNullOrWhiteSpace(existingContent))
+                    {
+                        // Check if the content is a valid JSON array
+                        if (existingContent.TrimStart().StartsWith("["))
+                        {
+                            existingEntries = JsonConvert.DeserializeObject<List<Entry>>(existingContent);
+                        }
+                        else
+                        {
+                            // Handle case where existing content is not a JSON array (e.g., empty or invalid)
+                            Console.WriteLine("Existing content is not a valid JSON array. Initializing with an empty list.");
+                        }
+                    }
+                }
+
+                // Add new entry
+                existingEntries.Add(entry);
+
+                // Serialize the object to JSON format
+                string content = JsonConvert.SerializeObject(existingEntries, Formatting.Indented);
+
+                // Write content back to the file
                 File.WriteAllText(configFilePath, content);
 
-                Debug.WriteLine("Data successfully written to file.");
+                Console.WriteLine("Data successfully appended to file.");
             }
-            catch (IOException ex) 
+            catch (IOException ex)
             {
-                Debug.WriteLine(ex.ToString());
+                Console.WriteLine(ex.ToString());
             }
- 
+            catch (JsonException ex)
+            {
+                Console.WriteLine("Error processing JSON: " + ex.Message);
+            }
         }
+
+
+
 
         public static void runApp()
         {
