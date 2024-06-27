@@ -15,12 +15,10 @@ C:\Users\dyann\Documents\Development\Scheduler\output\Debug\net7.0-windows\Sched
 C:\Users\dyann\Documents\Development\Scheduler\obj\Debug\net7.0-windows\Scheduler.csproj.AssemblyReference.cache
 C:\Users\dyann\Documents\Development\Scheduler\obj\Debug\net7.0-windows\Interop.IWshRuntimeLibrary.dll
 C:\Users\dyann\Documents\Development\Scheduler\obj\Debug\net7.0-windows\Scheduler.csproj.ResolveComReference.cache
-C:\Users\dyann\Documents\Development\Scheduler\obj\Debug\net7.0-windows\CustomInterval.g.cs
 C:\Users\dyann\Documents\Development\Scheduler\obj\Debug\net7.0-windows\MainWindow.g.cs
 C:\Users\dyann\Documents\Development\Scheduler\obj\Debug\net7.0-windows\App.g.cs
 C:\Users\dyann\Documents\Development\Scheduler\obj\Debug\net7.0-windows\Scheduler_MarkupCompile.cache
 C:\Users\dyann\Documents\Development\Scheduler\obj\Debug\net7.0-windows\Scheduler_MarkupCompile.lref
-C:\Users\dyann\Documents\Development\Scheduler\obj\Debug\net7.0-windows\CustomInterval.baml
 C:\Users\dyann\Documents\Development\Scheduler\obj\Debug\net7.0-windows\MainWindow.baml
 C:\Users\dyann\Documents\Development\Scheduler\obj\Debug\net7.0-windows\Scheduler.g.resources
 C:\Users\dyann\Documents\Development\Scheduler\obj\Debug\net7.0-windows\Scheduler.GeneratedMSBuildEditorConfig.editorconfig
@@ -55,3 +53,11 @@ C:\Users\dyann\Documents\Development\Scheduler-main\obj\Debug\net7.0-windows\Sch
 C:\Users\dyann\Documents\Development\Scheduler-main\obj\Debug\net7.0-windows\ref\Scheduler.dll
 C:\Users\dyann\Documents\Development\Scheduler\output\Debug\net7.0-windows\icon.ico
 C:\Users\dyann\Documents\Development\Scheduler-main\obj\Debug\net7.0-windows\Scheduler_Content.g.cs
+C:\Users\dyann\Documents\Development\Scheduler\output\Debug\net7.0-windows\Hardcodet.NotifyIcon.Wpf.dll
+C:\Users\dyann\Documents\Development\Scheduler\output\Debug\net7.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\dyann\Documents\Development\Scheduler\output\Debug\net7.0-windows\Newtonsoft.Json.dll
+C:\Users\dyann\Documents\Development\Scheduler\output\Debug\net7.0-windows\Quartz.dll
+C:\Users\dyann\Documents\Development\Scheduler\output\Debug\net7.0-windows\Serilog.dll
+C:\Users\dyann\Documents\Development\Scheduler\output\Debug\net7.0-windows\Serilog.Sinks.Console.dll
+C:\Users\dyann\Documents\Development\Scheduler\output\Debug\net7.0-windows\Serilog.Sinks.File.dll
+C:\Users\dyann\Documents\Development\Scheduler\obj\Debug\net7.0-windows\Scheduler_Content.g.cs
