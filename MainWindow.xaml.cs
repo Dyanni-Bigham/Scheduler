@@ -40,10 +40,16 @@ namespace Scheduler
             string iconPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "icon.ico");
             notifyIcon.Icon = new System.Drawing.Icon(iconPath);
             notifyIcon.Text = "Scheduler";
-            notifyIcon.Click += NotifyIcon_Click;
-            notifyIcon.Visible = true;
+            notifyIcon.MouseClick += NotifyIcon_MouseClick;
+
+            // menu actions
+            notifyIcon.ContextMenuStrip = new Forms.ContextMenuStrip();
+            notifyIcon.ContextMenuStrip.Items.Add("Run Scheduler");
+            notifyIcon.ContextMenuStrip.Items.Add("Stop Scheduler");
             //////////////////////////////////////////////////////
-            
+
+            notifyIcon.Visible = true;
+
             // Interval set up //
             // Add hours from 00:00 to 23:45 //
             for (int hour = 0; hour < 24; hour++)
@@ -57,7 +63,7 @@ namespace Scheduler
             }
             ///////////////////////////////////
         }
-
+        /*
         private void NotifyIcon_Click(object sender, EventArgs e)
         {
             if (this.WindowState == WindowState.Minimized)
@@ -69,6 +75,24 @@ namespace Scheduler
             else
             {
                 this.WindowState = WindowState.Minimized; // Minimize the window
+            }
+        }
+        */
+
+        private void NotifyIcon_MouseClick(object sender, Forms.MouseEventArgs e)
+        {
+            if (e.Button == Forms.MouseButtons.Left)
+            {
+                if (this.WindowState == WindowState.Minimized)
+                {
+                    this.WindowState = WindowState.Normal; // Restores window
+                    this.Show();
+                    this.Activate(); // Activate the window
+                }
+                else
+                {
+                    this.WindowState = WindowState.Minimized; // Minimize the window
+                }
             }
         }
 
