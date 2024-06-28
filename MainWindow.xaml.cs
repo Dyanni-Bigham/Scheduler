@@ -44,8 +44,9 @@ namespace Scheduler
 
             // menu actions
             notifyIcon.ContextMenuStrip = new Forms.ContextMenuStrip();
-            notifyIcon.ContextMenuStrip.Items.Add("Run Scheduler");
-            notifyIcon.ContextMenuStrip.Items.Add("Stop Scheduler");
+            notifyIcon.ContextMenuStrip.Items.Add("Run Scheduler", null, RunScheduler_Click);
+            notifyIcon.ContextMenuStrip.Items.Add("Stop Scheduler", null, StopScheduler_Click);
+            notifyIcon.ContextMenuStrip.Items.Add("Exit", null, Exit_Click);
             //////////////////////////////////////////////////////
 
             notifyIcon.Visible = true;
@@ -63,21 +64,37 @@ namespace Scheduler
             }
             ///////////////////////////////////
         }
-        /*
-        private void NotifyIcon_Click(object sender, EventArgs e)
+
+        private void RunScheduler_Click(object sender, EventArgs e)
         {
-            if (this.WindowState == WindowState.Minimized)
+            try
             {
-                this.WindowState = WindowState.Normal; // Restore the window
-                this.Show();
-                this.Activate(); // Activate the window
+                MessageBox.Show("Scheduler is running...");
             }
-            else
+            catch (Exception ex)
             {
-                this.WindowState = WindowState.Minimized; // Minimize the window
+                ErrorHandler.handleException(ex);
             }
         }
-        */
+
+        private void StopScheduler_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MessageBox.Show("Scheduler has stopped...");
+            }
+            catch (Exception ex)
+            {
+                ErrorHandler.handleException(ex);
+            }
+        }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            notifyIcon.Visible = false;
+            notifyIcon.Dispose();
+            Application.Current.Shutdown();
+        }
 
         private void NotifyIcon_MouseClick(object sender, Forms.MouseEventArgs e)
         {
