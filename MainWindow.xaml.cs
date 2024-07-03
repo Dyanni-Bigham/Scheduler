@@ -65,29 +65,114 @@ namespace Scheduler
             ///////////////////////////////////
         }
 
-        private void RunScheduler_Click(object sender, EventArgs e)
+        private async void RunScheduler_Click(object sender, EventArgs e)
         {
             try
             {
-                MessageBox.Show("Scheduler is running...");
+                string exePath = @"C:\Users\dyann\Documents\Development\Scheduler\SchedulerProcesser.exe";
+                string arguments = "true";
+
+                if (File.Exists(exePath))
+                {
+                    if (System.IO.Path.GetExtension(exePath).ToLower() == ".exe")
+                    {
+                        ProcessStartInfo startInfo = new ProcessStartInfo
+                        {
+                            FileName = exePath,
+                            Arguments = arguments,
+                            RedirectStandardOutput = true,
+                            RedirectStandardError = true,
+                            UseShellExecute = false,
+                            CreateNoWindow = true
+                        };
+
+                        using (Process process = new Process { StartInfo = startInfo })
+                        {
+                            process.Start();
+
+                            string output = await process.StandardOutput.ReadToEndAsync();
+                            string error = await process.StandardError.ReadToEndAsync();
+
+                            await process.WaitForExitAsync();
+
+                            // Ensure the MessageBox is shown on the UI thread
+                            /*
+                            Dispatcher.Invoke(() =>
+                            {
+                                MessageBox.Show($"Scheduler is running...\n\nOutput:\n{output}\n\nErrors:\n{error}");
+                            });
+
+                            Debug.WriteLine($"Output:\n{output}\nErrors:\n{error}");
+                            */
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show($"The file at '{exePath}' is not an executable.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show($"Executable file '{exePath}' does not exist.");
+                }
             }
             catch (Exception ex)
             {
-                ErrorHandler.handleException(ex);
+                Dispatcher.Invoke(() =>
+                {
+                    MessageBox.Show($"Error starting scheduler process: {ex.Message}");
+                });
             }
         }
+
+
 
         private void StopScheduler_Click(object sender, EventArgs e)
         {
             try
             {
-                MessageBox.Show("Scheduler has stopped...");
+                // Find the running SchedulerProcessor process
+                Process[] processes = Process.GetProcessesByName("SchedulerProcesser");
+                if (processes.Length > 0)
+                {
+                    foreach (Process process in processes)
+                    {
+                        try
+                        {
+                            process.Kill(true); // Forcefully terminate the process
+                            process.WaitForExit(); // Wait for the process to exit
+                        }
+                        catch (Exception ex)
+                        {
+                            Dispatcher.Invoke(() =>
+                            {
+                                MessageBox.Show($"Failed to stop process: {ex.Message}");
+                            });
+                        }
+                    }
+                    Dispatcher.Invoke(() =>
+                    {
+                        MessageBox.Show("Scheduler has been stopped.");
+                    });
+                }
+                else
+                {
+                    Dispatcher.Invoke(() =>
+                    {
+                        MessageBox.Show("Scheduler is not running.");
+                    });
+                }
             }
             catch (Exception ex)
             {
-                ErrorHandler.handleException(ex);
+                Dispatcher.Invoke(() =>
+                {
+                    ErrorHandler.handleException(ex);
+                });
             }
         }
+
+
 
         private void Exit_Click(object sender, EventArgs e)
         {
@@ -96,7 +181,7 @@ namespace Scheduler
             Application.Current.Shutdown();
         }
 
-        private void NotifyIcon_MouseClick(object sender, Forms.MouseEventArgs e)
+    private void NotifyIcon_MouseClick(object sender, Forms.MouseEventArgs e)
         {
             if (e.Button == Forms.MouseButtons.Left)
             {

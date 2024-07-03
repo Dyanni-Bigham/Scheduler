@@ -49,7 +49,7 @@
         <ListBox x:Name="intervalsListBox" SelectionChanged="IntervalsListBox_SelectionChanged" Grid.Column="1" Margin="26,50,27,142" Grid.RowSpan="2">
         </ListBox>
 
-        <Button Grid.Column="1" Margin="36,54,40,90" Click="Test_button" Grid.Row="1">Test</Button>
+        <Button Grid.Column="1" Margin="36,54,40,90" Click="Test_button" Grid.Row="1">Add Application</Button>
 
         <Button Grid.Column="2" Margin="41,104,40,169" Click="App_Select" Grid.RowSpan="2">Select Application</Button>
     </Grid>

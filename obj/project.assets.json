@@ -660,11 +660,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dyann\\Documents\\Development\\Scheduler-main\\Scheduler.csproj",
+      "projectUniqueName": "C:\\Users\\dyann\\Documents\\Development\\Scheduler\\Scheduler.csproj",
       "projectName": "Scheduler",
-      "projectPath": "C:\\Users\\dyann\\Documents\\Development\\Scheduler-main\\Scheduler.csproj",
+      "projectPath": "C:\\Users\\dyann\\Documents\\Development\\Scheduler\\Scheduler.csproj",
       "packagesPath": "C:\\Users\\dyann\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dyann\\Documents\\Development\\Scheduler-main\\obj\\",
+      "outputPath": "C:\\Users\\dyann\\Documents\\Development\\Scheduler\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dyann\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -742,7 +742,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
