@@ -21,14 +21,5 @@ namespace Scheduler.Utils
             entries.Remove(entry);
         }
 
-        /*
-        public void listEntries()
-        {
-            foreach (Entry entry in entries)
-            {
-                Debug.WriteLine(entry.Day);
-            }
-        }
-        */
     }
 }

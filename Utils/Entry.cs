@@ -23,13 +23,6 @@ namespace Scheduler.Utils
         // test method for debugging will delete later
         public void testEntry()
         {
-            /*
-            if (Days != null && Apps != null) 
-            {
-                formatDays();
-                testApps();
-            }
-            */
 
             Debug.WriteLine("Selected Days:");
             Debug.WriteLine("==============\n");
@@ -49,16 +42,5 @@ namespace Scheduler.Utils
             Debug.WriteLine("==============\n");
             //Debug.WriteLine(appsOutput);
         }
-        /*
-        public void formatDays()
-        {
-            daysOutput = string.Join(", ", Days);
-        }
-
-        public void testApps()
-        {
-            appsOutput = string.Join(", ", Apps);
-        }
-        */
     }
 }

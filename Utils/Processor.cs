@@ -16,19 +16,8 @@ namespace Scheduler.Utils
         // rename this method to handleEntry
         public static void HandleMethod(Entry entry)
         {
-            /*
-            Debug.WriteLine("This data is being handled\n");
-            entry.testEntry();
-            Debug.WriteLine("After data is handled."); // Delete Later
-            */
-
             // write to config file
             WriteToFile(entry);
-
-            //TimeHandling.scheduleTask();
-
-            // Testing to see if I can call the applicatin using config file
-            //runApp();
 
         }
         public static void WriteToFile(Entry entry)
