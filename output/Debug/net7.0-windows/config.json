@@ -1,0 +1,20 @@
+[
+  {
+    "Days": [
+      "Sunday"
+    ],
+    "Apps": [
+      "C:\\Users\\dyann\\AppData\\Local\\Programs\\FreeTube\\FreeTube.exe"
+    ],
+    "Interval": "21:30"
+  },
+  {
+    "Days": [
+      "Sunday"
+    ],
+    "Apps": [
+      "C:\\Users\\dyann\\AppData\\Roaming\\Spotify\\Spotify.exe"
+    ],
+    "Interval": "21:45"
+  }
+]

@@ -31,7 +31,7 @@
         </Grid.ColumnDefinitions>
 
         <Label HorizontalContentAlignment="Center" Padding="20" FontSize="16" Margin="25,0,25,66">Days</Label>
-        <Label HorizontalContentAlignment="Center" Padding="20" FontSize="16" Grid.Column="1" Grid.RowSpan="2" Content="Intervals (H:m)"/>
+        <Label HorizontalContentAlignment="Center" Padding="20" FontSize="16" Grid.Column="1" Grid.RowSpan="2" Content="24 Hours"/>
 
         <ListBox x:Name="daysListBox" SelectionMode="Multiple" SelectionChanged="DaysListBox_SelectionChanged" Grid.Column="0"  Width="90" Margin="36,50,28,98" Grid.RowSpan="2">
             <ListBoxItem>Monday</ListBoxItem>
@@ -49,7 +49,7 @@
         <ListBox x:Name="intervalsListBox" SelectionChanged="IntervalsListBox_SelectionChanged" Grid.Column="1" Margin="26,50,27,142" Grid.RowSpan="2">
         </ListBox>
 
-        <Button Grid.Column="1" Margin="36,54,40,90" Click="Test_button" Grid.Row="1">Add Application</Button>
+        <Button Grid.Column="1" Margin="36,54,40,90" Click="Run_button" Grid.Row="1">Add Application</Button>
 
         <Button Grid.Column="2" Margin="41,104,40,169" Click="App_Select" Grid.RowSpan="2">Select Application</Button>
     </Grid>

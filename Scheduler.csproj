@@ -11,7 +11,6 @@
 
   <ItemGroup>
     <None Remove="icon.ico" />
-    <None Remove="SchedulerProcesser.exe" />
   </ItemGroup>
 
   <ItemGroup>
@@ -36,12 +35,6 @@
     <Content Include="icon.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="SchedulerProcesser.exe">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Content>
-    <None Update="config.json">
-        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
   <ItemGroup>
@@ -51,6 +44,12 @@
     <PackageReference Include="Serilog" Version="3.1.1" />
     <PackageReference Include="Serilog.Sinks.Console" Version="5.0.1" />
     <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="SchedulerProcesser.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>

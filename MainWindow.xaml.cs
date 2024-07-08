@@ -19,6 +19,7 @@ using Scheduler.Utils;
 using Scheduler.exceptions;
 using System.Runtime.InteropServices;
 using System.IO;
+using System.IO.Pipes;
 
 namespace Scheduler
 {
@@ -44,8 +45,8 @@ namespace Scheduler
 
             // menu actions
             notifyIcon.ContextMenuStrip = new Forms.ContextMenuStrip();
-            notifyIcon.ContextMenuStrip.Items.Add("Run Scheduler", null, RunScheduler_Click);
-            notifyIcon.ContextMenuStrip.Items.Add("Stop Scheduler", null, StopScheduler_Click);
+            notifyIcon.ContextMenuStrip.Items.Add("Start Scheduler", null, StartScheduler_Click);
+            notifyIcon.ContextMenuStrip.Items.Add("Stop Scheduler", null, ShutdownScheduler_Click);
             notifyIcon.ContextMenuStrip.Items.Add("Exit", null, Exit_Click);
             //////////////////////////////////////////////////////
 
@@ -65,12 +66,15 @@ namespace Scheduler
             ///////////////////////////////////
         }
 
-        private async void RunScheduler_Click(object sender, EventArgs e)
+        private async void StartScheduler_Click(object sender, EventArgs e)
         {
             try
             {
-                string exePath = @"C:\Users\dyann\Documents\Development\Scheduler\SchedulerProcesser.exe";
-                string arguments = "true";
+                //string exePath = @"C:\Users\dyann\Documents\Development\Scheduler\SchedulerProcesser.exe";
+                string currDirectory = AppDomain.CurrentDomain.BaseDirectory;
+                Debug.WriteLine($"Current directory: {currDirectory}");
+                string exePath = System.IO.Path.Combine(currDirectory, "SchedulerProcesser.exe");
+                string arguments = "true"; // Pass true to start the application
 
                 if (File.Exists(exePath))
                 {
@@ -95,15 +99,7 @@ namespace Scheduler
 
                             await process.WaitForExitAsync();
 
-                            // Ensure the MessageBox is shown on the UI thread
-                            /*
-                            Dispatcher.Invoke(() =>
-                            {
-                                MessageBox.Show($"Scheduler is running...\n\nOutput:\n{output}\n\nErrors:\n{error}");
-                            });
-
-                            Debug.WriteLine($"Output:\n{output}\nErrors:\n{error}");
-                            */
+                            MessageBox.Show("Scheduler shutdown.");
                         }
                     }
                     else
@@ -113,6 +109,7 @@ namespace Scheduler
                 }
                 else
                 {
+                    Debug.WriteLine($"Cannot find: {exePath}");
                     MessageBox.Show($"Executable file '{exePath}' does not exist.");
                 }
             }
@@ -126,48 +123,28 @@ namespace Scheduler
         }
 
 
-
-        private void StopScheduler_Click(object sender, EventArgs e)
+        private async void ShutdownScheduler_Click(object sender, EventArgs e)
         {
             try
             {
-                // Find the running SchedulerProcessor process
-                Process[] processes = Process.GetProcessesByName("SchedulerProcesser");
-                if (processes.Length > 0)
+                using (var client = new NamedPipeClientStream("SchedulerProcessorPipe"))
                 {
-                    foreach (Process process in processes)
+                    await client.ConnectAsync(5000); // Wait for up to 5 seconds to connect
+
+                    using (var writer = new StreamWriter(client))
                     {
-                        try
-                        {
-                            process.Kill(true); // Forcefully terminate the process
-                            process.WaitForExit(); // Wait for the process to exit
-                        }
-                        catch (Exception ex)
-                        {
-                            Dispatcher.Invoke(() =>
-                            {
-                                MessageBox.Show($"Failed to stop process: {ex.Message}");
-                            });
-                        }
+                        await writer.WriteLineAsync("shutdown");
+                        await writer.FlushAsync();
                     }
-                    Dispatcher.Invoke(() =>
-                    {
-                        MessageBox.Show("Scheduler has been stopped.");
-                    });
                 }
-                else
-                {
-                    Dispatcher.Invoke(() =>
-                    {
-                        MessageBox.Show("Scheduler is not running.");
-                    });
-                }
+
+                //MessageBox.Show("Shutdown signal sent to SchedulerProcessor.");
             }
             catch (Exception ex)
             {
                 Dispatcher.Invoke(() =>
                 {
-                    ErrorHandler.handleException(ex);
+                    MessageBox.Show($"Error sending shutdown signal: {ex.Message}");
                 });
             }
         }
@@ -198,16 +175,6 @@ namespace Scheduler
             }
         }
 
-        /*
-        private void Summon_CustomInterval(object sender, RoutedEventArgs e)
-        {
-
-            Debug.WriteLine("Is this working?");
-            CustomInterval customIntervvalWindow = new CustomInterval();
-            customIntervvalWindow.Show();
-
-        }
-        */
 
         private void DaysListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -229,22 +196,6 @@ namespace Scheduler
 
         }
 
-        /*
-        private void IntervalsListBox_SelectionChanged(Object sender, SelectionChangedEventArgs e)
-        {
-            var selectedInterval = intervalsListBox.SelectedItem;
-
-            if (selectedInterval is ListBoxItem listBoxItem)
-            {
-                entry.Interval = listBoxItem.Content.ToString();
-            }
-            else
-            {
-                Debug.WriteLine("This is a null value even though an interval is selected");
-            }
-
-        }
-        */
 
         private void IntervalsListBox_SelectionChanged(Object sender, SelectionChangedEventArgs e)
         {
@@ -259,24 +210,8 @@ namespace Scheduler
                 Debug.WriteLine("No interval selected.");
             }
         }
-        /*
-        private void appListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            entry.Apps ??= new List<string>();
-            entry.Apps.Clear();
 
-            foreach (var selectedApp in appListBox.SelectedItems)
-            {
-                if (selectedApp is ListBoxItem listBoxItem)
-                {
-                    string app = listBoxItem.Content.ToString();
-                    entry.Apps.Add(app);
-                }
-            }
-        }
-        */
-
-        private void Test_button(Object sender, RoutedEventArgs e)
+        private void Run_button(Object sender, RoutedEventArgs e)
         {
 
             //MessageBox.Show("Days, intervals, and apps are being sent to the backend");
@@ -378,18 +313,6 @@ namespace Scheduler
             catch (Exception)
             {
                 return null;
-            }
-        }
-
-        private void ExecuteFile(string filePath)
-        {
-            try
-            {
-                Process.Start(filePath);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error executing file: " + ex.Message);
             }
         }
     }
