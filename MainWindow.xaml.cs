@@ -72,8 +72,8 @@ namespace Scheduler
             {
                 //string exePath = @"C:\Users\dyann\Documents\Development\Scheduler\SchedulerProcesser.exe";
                 string currDirectory = AppDomain.CurrentDomain.BaseDirectory;
-                Debug.WriteLine($"Current directory: {currDirectory}");
-                string exePath = System.IO.Path.Combine(currDirectory, "SchedulerProcesser.exe");
+                Debug.WriteLine(currDirectory);
+                string exePath = System.IO.Path.Combine(currDirectory, "SchedulerProcessor.exe");
                 string arguments = "true"; // Pass true to start the application
 
                 if (File.Exists(exePath))

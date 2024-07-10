@@ -29,7 +29,7 @@ C:\Users\dyann\Documents\Development\Scheduler-main\obj\Debug\net7.0-windows\ref
 C:\Users\dyann\Documents\Development\Scheduler-main\obj\Debug\net7.0-windows\Scheduler_Content.g.cs
 C:\Users\dyann\Documents\Development\Scheduler\output\Debug\net7.0-windows\Scheduler.exe
 C:\Users\dyann\Documents\Development\Scheduler\output\Debug\net7.0-windows\icon.ico
-C:\Users\dyann\Documents\Development\Scheduler\output\Debug\net7.0-windows\SchedulerProcesser.exe
+C:\Users\dyann\Documents\Development\Scheduler\output\Debug\net7.0-windows\SchedulerProcessor.exe
 C:\Users\dyann\Documents\Development\Scheduler\output\Debug\net7.0-windows\Scheduler.deps.json
 C:\Users\dyann\Documents\Development\Scheduler\output\Debug\net7.0-windows\Scheduler.runtimeconfig.json
 C:\Users\dyann\Documents\Development\Scheduler\output\Debug\net7.0-windows\Scheduler.dll
