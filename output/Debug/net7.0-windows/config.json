@@ -4,17 +4,28 @@
       "Sunday"
     ],
     "Apps": [
-      "C:\\Users\\dyann\\AppData\\Roaming\\Spotify\\Spotify.exe"
+      "C:\\Users\\dyann\\AppData\\Local\\Programs\\FreeTube\\FreeTube.exe"
     ],
-    "Interval": "22:30"
+    "Interval": "17:00"
   },
   {
     "Days": [
-      "Sunday"
+      "Wednesday"
     ],
     "Apps": [
-      "C:\\Users\\dyann\\AppData\\Local\\Programs\\FreeTube\\FreeTube.exe"
+      "C:\\Users\\dyann\\AppData\\Roaming\\Spotify\\Spotify.exe"
     ],
-    "Interval": "22:45"
+    "Interval": "21:00"
+  },
+  {
+    "Days": [
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "Apps": [
+      "C:\\Users\\dyann\\AppData\\Local\\Programs\\Evernote\\Evernote.exe"
+    ],
+    "Interval": "19:00"
   }
 ]

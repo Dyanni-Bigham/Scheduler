@@ -1,0 +1,13 @@
+7/10/2024 8:48:50 PM: Application is starting
+7/10/2024 8:48:50 PM: Loading schedule from config file...
+7/10/2024 8:48:50 PM: Setting the file path
+7/10/2024 8:48:50 PM: I am trying read this file: C:\Users\dyann\Documents\Development\Scheduler\output\Debug\net7.0-windows\config.json
+7/10/2024 8:48:50 PM: entries have been read from file
+7/10/2024 8:48:50 PM: Processor is now picking up entries
+7/10/2024 8:48:50 PM: Schedule has been created with the entries
+7/10/2024 8:48:50 PM: Returning the schedule for processing
+7/10/2024 8:48:50 PM: Schedule loaded successfully...
+
+7/10/2024 8:48:50 PM: Getting current time 7/10/2024 8:48:50 PM
+7/10/2024 8:48:50 PM: Adjusted time. sleeping until correct 15 minute interval
+
