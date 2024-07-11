@@ -1,0 +1,29 @@
+7/9/2024 7:13:29 PM: Application is starting
+7/9/2024 7:13:29 PM: Loading schedule from config file...
+7/9/2024 7:13:29 PM: Setting the file path
+7/9/2024 7:13:29 PM: I am trying read this file: C:\Users\dyann\Documents\Development\Scheduler\output\Debug\net7.0-windows\config.json
+7/9/2024 7:13:29 PM: entries have been read from file
+7/9/2024 7:13:29 PM: Processor is now picking up entries
+7/9/2024 7:13:29 PM: Schedule has been created with the entries
+7/9/2024 7:13:29 PM: Returning the schedule for processing
+7/9/2024 7:13:29 PM: Schedule loaded successfully...
+
+7/9/2024 7:13:29 PM: Getting current time 7/9/2024 7:13:29 PM
+7/9/2024 7:13:29 PM: Adjusted time. sleeping until correct 15 minute interval
+
+7/9/2024 7:15:00 PM: Getting current time 7/9/2024 7:15:00 PM
+7/9/2024 7:15:00 PM: Correct 15 minute interval. Application starting soon...
+
+7/9/2024 7:15:00 PM: Converting time from 12 clock to 24 clock
+7/9/2024 7:15:00 PM: Executing the application
+7/9/2024 7:15:00 PM: Executing the application C:\Users\dyann\AppData\Local\Programs\FreeTube\FreeTube.exe
+7/9/2024 7:15:00 PM: Sleeping for 15 minutes
+
+7/9/2024 7:30:00 PM: Getting current time 7/9/2024 7:30:00 PM
+7/9/2024 7:30:00 PM: Correct 15 minute interval. Application starting soon...
+
+7/9/2024 7:30:00 PM: Converting time from 12 clock to 24 clock
+7/9/2024 7:30:00 PM: Executing the application
+7/9/2024 7:30:00 PM: Executing the application C:\Users\dyann\AppData\Roaming\Spotify\Spotify.exe
+7/9/2024 7:30:00 PM: Sleeping for 15 minutes
+

@@ -52,6 +52,8 @@
         <Button Grid.Column="1" Margin="36,54,40,90" Click="Run_button" Grid.Row="1">Add Application</Button>
 
         <Button Grid.Column="2" Margin="41,104,40,169" Click="App_Select" Grid.RowSpan="2">Select Application</Button>
+
+        <Button Grid.Column="2" Click="OpenEditWindow_Click" Grid.Row="1" Margin="34,54,32,90">Edit Config</Button>
     </Grid>
 
 </Window>

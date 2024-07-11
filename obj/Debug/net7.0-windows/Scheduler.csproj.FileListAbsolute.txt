@@ -44,11 +44,14 @@ C:\Users\dyann\Documents\Development\Scheduler\output\Debug\net7.0-windows\Seril
 C:\Users\dyann\Documents\Development\Scheduler\obj\Debug\net7.0-windows\Scheduler.csproj.AssemblyReference.cache
 C:\Users\dyann\Documents\Development\Scheduler\obj\Debug\net7.0-windows\Interop.IWshRuntimeLibrary.dll
 C:\Users\dyann\Documents\Development\Scheduler\obj\Debug\net7.0-windows\Scheduler.csproj.ResolveComReference.cache
+C:\Users\dyann\Documents\Development\Scheduler\obj\Debug\net7.0-windows\EditWindow.g.cs
 C:\Users\dyann\Documents\Development\Scheduler\obj\Debug\net7.0-windows\MainWindow.g.cs
 C:\Users\dyann\Documents\Development\Scheduler\obj\Debug\net7.0-windows\App.g.cs
 C:\Users\dyann\Documents\Development\Scheduler\obj\Debug\net7.0-windows\Scheduler_Content.g.cs
+C:\Users\dyann\Documents\Development\Scheduler\obj\Debug\net7.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Users\dyann\Documents\Development\Scheduler\obj\Debug\net7.0-windows\Scheduler_MarkupCompile.cache
 C:\Users\dyann\Documents\Development\Scheduler\obj\Debug\net7.0-windows\Scheduler_MarkupCompile.lref
+C:\Users\dyann\Documents\Development\Scheduler\obj\Debug\net7.0-windows\EditWindow.baml
 C:\Users\dyann\Documents\Development\Scheduler\obj\Debug\net7.0-windows\MainWindow.baml
 C:\Users\dyann\Documents\Development\Scheduler\obj\Debug\net7.0-windows\Scheduler.g.resources
 C:\Users\dyann\Documents\Development\Scheduler\obj\Debug\net7.0-windows\Scheduler.GeneratedMSBuildEditorConfig.editorconfig

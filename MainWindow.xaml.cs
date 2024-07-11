@@ -122,7 +122,11 @@ namespace Scheduler
             }
         }
 
-
+        private void OpenEditWindow_Click(object sender, EventArgs e)
+        {
+            EditWindow editWindow = new EditWindow();
+            editWindow.Show();
+        }
         private async void ShutdownScheduler_Click(object sender, EventArgs e)
         {
             try
