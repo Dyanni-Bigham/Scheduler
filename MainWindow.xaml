@@ -49,11 +49,11 @@
         <ListBox x:Name="intervalsListBox" SelectionChanged="IntervalsListBox_SelectionChanged" Grid.Column="1" Margin="26,50,27,142" Grid.RowSpan="2">
         </ListBox>
 
-        <Button Grid.Column="1" Margin="36,54,40,90" Click="Run_button" Grid.Row="1">Add Application</Button>
+        <Button Grid.Column="2" Margin="34,108,47,166" Click="Run_button" Grid.RowSpan="2">Add Application</Button>
 
-        <Button Grid.Column="2" Margin="41,104,40,169" Click="App_Select" Grid.RowSpan="2">Select Application</Button>
+        <Button Grid.Column="2" Margin="34,52,47,52" Click="App_Select">Select Application</Button>
 
-        <Button Grid.Column="2" Click="OpenEditWindow_Click" Grid.Row="1" Margin="34,54,32,90">Edit Config</Button>
+        <Button Grid.Column="2" Click="OpenEditWindow_Click" Grid.Row="1" Margin="34,33,42,111">Edit Config</Button>
     </Grid>
 
 </Window>

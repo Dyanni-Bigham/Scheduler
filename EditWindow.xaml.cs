@@ -31,16 +31,30 @@ namespace Scheduler
 
             string currDirectory = AppDomain.CurrentDomain.BaseDirectory;
             string configFilePath = System.IO.Path.Combine(currDirectory, "config.json");
-            string jsonData = File.ReadAllText(configFilePath);
 
-            var schedulesFromJson = JsonConvert.DeserializeObject<List<Utils.Entry>>(jsonData);
-
-            foreach (var schedule in schedulesFromJson)
+            try
             {
-                Schedules.Add(schedule);
+                if (!File.Exists(configFilePath))
+                {
+                    MessageBox.Show("File does not exist. Please create a schedule entry.");
+                    return;
+                }
+
+                string jsonData = File.ReadAllText(configFilePath);
+                var schedulesFromJson = JsonConvert.DeserializeObject<List<Utils.Entry>>(jsonData);
+
+                foreach (var schedule in schedulesFromJson)
+                {
+                    Schedules.Add(schedule);
+                }
+
+                dataGrid.ItemsSource = Schedules;
             }
 
-            dataGrid.ItemsSource = Schedules;
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while loading the configuration: {ex.Message}");
+            }
         }
 
         private void SaveChanges()
