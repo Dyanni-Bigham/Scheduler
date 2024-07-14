@@ -19,13 +19,11 @@
   },
   {
     "Days": [
-      "Wednesday",
-      "Thursday",
-      "Friday"
+      "Thursday"
     ],
     "Apps": [
-      "C:\\Users\\dyann\\AppData\\Local\\Programs\\Evernote\\Evernote.exe"
+      "C:\\Users\\dyann\\AppData\\Roaming\\Spotify\\Spotify.exe"
     ],
-    "Interval": "19:00"
+    "Interval": "16:45"
   }
 ]

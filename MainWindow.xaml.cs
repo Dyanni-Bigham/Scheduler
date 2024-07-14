@@ -70,11 +70,10 @@ namespace Scheduler
         {
             try
             {
-                //string exePath = @"C:\Users\dyann\Documents\Development\Scheduler\SchedulerProcesser.exe";
                 string currDirectory = AppDomain.CurrentDomain.BaseDirectory;
                 Debug.WriteLine(currDirectory);
                 string exePath = System.IO.Path.Combine(currDirectory, "SchedulerProcessor.exe");
-                string arguments = "true"; // Pass true to start the application
+                string arguments = "true";
 
                 if (File.Exists(exePath))
                 {
@@ -142,7 +141,6 @@ namespace Scheduler
                     }
                 }
 
-                //MessageBox.Show("Shutdown signal sent to SchedulerProcessor.");
             }
             catch (Exception ex)
             {
@@ -168,13 +166,13 @@ namespace Scheduler
             {
                 if (this.WindowState == WindowState.Minimized)
                 {
-                    this.WindowState = WindowState.Normal; // Restores window
+                    this.WindowState = WindowState.Normal;
                     this.Show();
-                    this.Activate(); // Activate the window
+                    this.Activate();
                 }
                 else
                 {
-                    this.WindowState = WindowState.Minimized; // Minimize the window
+                    this.WindowState = WindowState.Minimized;
                 }
             }
         }
@@ -182,13 +180,10 @@ namespace Scheduler
 
         private void DaysListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            // Ensure entry.Days is initalized
             entry.Days ??= new List<string>();
 
-            // clear existing items in the list
             entry.Days.Clear();
 
-            // get all of the selcted days
             foreach (var selectedDay in daysListBox.SelectedItems)
             {
                 if (selectedDay is ListBoxItem listBoxItem)
@@ -217,8 +212,6 @@ namespace Scheduler
 
         private void Run_button(Object sender, RoutedEventArgs e)
         {
-
-            //MessageBox.Show("Days, intervals, and apps are being sent to the backend");
             
             try
             {
@@ -236,10 +229,7 @@ namespace Scheduler
                 {
                     throw new MissingApplicationException("Please select an application.");
                 }
-                
-                //Debug.WriteLine(entry.Apps);
-                //Debug.WriteLine(entry.Interval);
-                //Debug.WriteLine(entry.Days);
+
                 Processor.HandleMethod(entry);
             }
             catch (DaysMissingException ex)
@@ -261,7 +251,6 @@ namespace Scheduler
 
         private void cb1_Checked(object sender, RoutedEventArgs e)
         {
-            // Select all days
             foreach (ListBoxItem item in daysListBox.Items)
             {
 
@@ -272,7 +261,6 @@ namespace Scheduler
 
         private void cb1_Unchecked(object sender, RoutedEventArgs e)
         {
-            // Deselect all days
             foreach (ListBoxItem item in daysListBox.Items)
             {
                 item.IsSelected = false;
@@ -294,10 +282,7 @@ namespace Scheduler
                 string targetPath = ResolveShortcut(shortcutPath);
                 if (!string.IsNullOrEmpty(targetPath))
                 {
-                    //MessageBox.Show("Shortcut target: " + targetPath);
                     entry.Apps.Add(targetPath);
-
-                    //ExecuteFile(targetPath);
                 }
                 else
                 {

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Scheduler"
         xmlns:utils="clr-namespace:Scheduler.Utils"
         mc:Ignorable="d"
-        Title="EditWindow" Height="450" Width="800">
+        Title="EditWindow" Height="357" Width="736" ResizeMode="NoResize">
     <Window.Resources>
         <utils:FileNameConverter x:Key="FileNameConverter" />
     </Window.Resources>
@@ -38,8 +38,8 @@
             </DataGrid.Columns>
         </DataGrid>
 
-        <Button Content="Save Changes" Click="SaveButton_Click" HorizontalAlignment="Left" Margin="677,352,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button Content="Save Changes" Click="SaveButton_Click" HorizontalAlignment="Left" Margin="604,289,0,0" VerticalAlignment="Top" Width="100"/>
 
-        <Button Content="Delete Selected" Click="DeleteButton_Click" HorizontalAlignment="Left" Margin="677,390,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button Content="Delete Selected" Click="DeleteButton_Click" HorizontalAlignment="Left" Margin="604,247,0,0" VerticalAlignment="Top" Width="100"/>
     </Grid>
 </Window>
