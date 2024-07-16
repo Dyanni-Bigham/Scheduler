@@ -271,22 +271,33 @@ namespace Scheduler
         private void App_Select(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Shortcut files (*.lnk)|*.lnk";
+            openFileDialog.Filter = "Executable and Shortcut files (*.exe;*.lnk)|*.exe;*.lnk|Executable files (*.exe)|*.exe|Shortcut files (*.lnk)|*.lnk";
 
             entry.Apps ??= new List<string>();
             entry.Apps.Clear();
 
             if (openFileDialog.ShowDialog() == true)
             {
-                string shortcutPath = openFileDialog.FileName;
-                string targetPath = ResolveShortcut(shortcutPath);
-                if (!string.IsNullOrEmpty(targetPath))
+                string selectedPath = openFileDialog.FileName;
+                if (selectedPath.EndsWith(".lnk", StringComparison.OrdinalIgnoreCase))
                 {
-                    entry.Apps.Add(targetPath);
+                    string targetPath = ResolveShortcut(selectedPath);
+                    if(!string.IsNullOrEmpty(targetPath))
+                    {
+                        entry.Apps.Add(targetPath);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to resolve shortcut.");
+                    }
+                }
+                else if (selectedPath.EndsWith(".exe", StringComparison.OrdinalIgnoreCase))
+                {
+                    entry.Apps.Add(selectedPath);
                 }
                 else
                 {
-                    MessageBox.Show("Failed to resolve shortcut.");
+                    MessageBox.Show("Invalid file selected.");
                 }
             }
         }
